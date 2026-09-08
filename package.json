@@ -1,0 +1,27 @@
+{
+  "name": "educaplay-secundaria-amb26-02",
+  "version": "1.0.0",
+  "description": "EducaPlay Secundaria - Motion Graphics en Remotion para AMB26-02",
+  "scripts": {
+    "start": "remotion preview src/index.ts",
+    "studio": "remotion studio src/index.ts",
+    "build": "remotion render EpisodeAMB2602 out/AMB26-02-FINAL.mp4",
+    "render": "remotion render EpisodeAMB2602 out/AMB26-02-FINAL.mp4",
+    "render:alpha": "remotion render EpisodeAMB2602-Overlay out/AMB26-02-OVERLAYS-ALPHA.mov --codec=prores --prores-profile=4444 --pixel-format=yuva444p10le",
+    "render:alpha:1min": "remotion render EpisodeAMB2602-Overlay-1Min out/AMB26-02-OVERLAYS-1MIN.mov --codec=prores --prores-profile=4444 --pixel-format=yuva444p10le",
+    "check": "node scripts/check-layout.mjs",
+    "stills": "node scripts/generate-sync-mobile-stills.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.280",
+    "@remotion/media-utils": "^4.0.280",
+    "@remotion/shapes": "^4.0.280",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.280"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "typescript": "^5.4.5"
+  }
+}

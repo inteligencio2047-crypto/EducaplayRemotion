@@ -1,0 +1,3002 @@
+[
+  {
+    "word": "Ya",
+    "start": 10.76,
+    "end": 11.54,
+    "startFrame": 258,
+    "endFrame": 277,
+    "probability": 0.035
+  },
+  {
+    "word": "que",
+    "start": 11.54,
+    "end": 11.92,
+    "startFrame": 277,
+    "endFrame": 286,
+    "probability": 0.882
+  },
+  {
+    "word": "el",
+    "start": 11.92,
+    "end": 12.12,
+    "startFrame": 286,
+    "endFrame": 291,
+    "probability": 0.915
+  },
+  {
+    "word": "agua,",
+    "start": 12.12,
+    "end": 12.38,
+    "startFrame": 291,
+    "endFrame": 297,
+    "probability": 0.999
+  },
+  {
+    "word": "¿qué",
+    "start": 12.88,
+    "end": 12.96,
+    "startFrame": 309,
+    "endFrame": 311,
+    "probability": 0.761
+  },
+  {
+    "word": "hacemos",
+    "start": 12.96,
+    "end": 13.46,
+    "startFrame": 311,
+    "endFrame": 323,
+    "probability": 0.999
+  },
+  {
+    "word": "si",
+    "start": 13.46,
+    "end": 13.74,
+    "startFrame": 323,
+    "endFrame": 329,
+    "probability": 0.988
+  },
+  {
+    "word": "corriente",
+    "start": 13.74,
+    "end": 14.16,
+    "startFrame": 329,
+    "endFrame": 340,
+    "probability": 0.984
+  },
+  {
+    "word": "se",
+    "start": 14.16,
+    "end": 14.4,
+    "startFrame": 340,
+    "endFrame": 345,
+    "probability": 0.993
+  },
+  {
+    "word": "inunda?",
+    "start": 14.4,
+    "end": 14.74,
+    "startFrame": 345,
+    "endFrame": 353,
+    "probability": 0.947
+  },
+  {
+    "word": "Antes",
+    "start": 15.26,
+    "end": 15.54,
+    "startFrame": 366,
+    "endFrame": 373,
+    "probability": 0.948
+  },
+  {
+    "word": "que",
+    "start": 15.54,
+    "end": 15.74,
+    "startFrame": 373,
+    "endFrame": 377,
+    "probability": 0.995
+  },
+  {
+    "word": "nada,",
+    "start": 15.74,
+    "end": 16.06,
+    "startFrame": 377,
+    "endFrame": 385,
+    "probability": 0.998
+  },
+  {
+    "word": "estar",
+    "start": 16.42,
+    "end": 16.54,
+    "startFrame": 394,
+    "endFrame": 397,
+    "probability": 0.921
+  },
+  {
+    "word": "bien",
+    "start": 16.54,
+    "end": 17.0,
+    "startFrame": 397,
+    "endFrame": 408,
+    "probability": 0.997
+  },
+  {
+    "word": "informados",
+    "start": 17.0,
+    "end": 17.72,
+    "startFrame": 408,
+    "endFrame": 425,
+    "probability": 0.979
+  },
+  {
+    "word": "y",
+    "start": 17.72,
+    "end": 18.06,
+    "startFrame": 425,
+    "endFrame": 433,
+    "probability": 0.91
+  },
+  {
+    "word": "para",
+    "start": 18.06,
+    "end": 18.26,
+    "startFrame": 433,
+    "endFrame": 438,
+    "probability": 0.987
+  },
+  {
+    "word": "eso",
+    "start": 18.26,
+    "end": 18.54,
+    "startFrame": 438,
+    "endFrame": 445,
+    "probability": 0.991
+  },
+  {
+    "word": "vamos",
+    "start": 18.54,
+    "end": 18.98,
+    "startFrame": 445,
+    "endFrame": 455,
+    "probability": 0.872
+  },
+  {
+    "word": "a",
+    "start": 18.98,
+    "end": 19.14,
+    "startFrame": 455,
+    "endFrame": 459,
+    "probability": 0.993
+  },
+  {
+    "word": "derribar",
+    "start": 19.14,
+    "end": 19.6,
+    "startFrame": 459,
+    "endFrame": 470,
+    "probability": 0.9
+  },
+  {
+    "word": "algunos",
+    "start": 19.6,
+    "end": 20.0,
+    "startFrame": 470,
+    "endFrame": 480,
+    "probability": 0.934
+  },
+  {
+    "word": "mitos.",
+    "start": 20.0,
+    "end": 20.52,
+    "startFrame": 480,
+    "endFrame": 492,
+    "probability": 0.992
+  },
+  {
+    "word": "Mito",
+    "start": 21.08,
+    "end": 21.42,
+    "startFrame": 505,
+    "endFrame": 514,
+    "probability": 0.773
+  },
+  {
+    "word": "1.",
+    "start": 21.42,
+    "end": 21.92,
+    "startFrame": 514,
+    "endFrame": 526,
+    "probability": 0.675
+  },
+  {
+    "word": "Nos",
+    "start": 22.46,
+    "end": 22.68,
+    "startFrame": 539,
+    "endFrame": 544,
+    "probability": 0.888
+  },
+  {
+    "word": "inundamos",
+    "start": 22.68,
+    "end": 23.44,
+    "startFrame": 544,
+    "endFrame": 562,
+    "probability": 0.998
+  },
+  {
+    "word": "porque",
+    "start": 23.44,
+    "end": 24.14,
+    "startFrame": 562,
+    "endFrame": 579,
+    "probability": 0.908
+  },
+  {
+    "word": "está",
+    "start": 24.14,
+    "end": 24.54,
+    "startFrame": 579,
+    "endFrame": 588,
+    "probability": 0.959
+  },
+  {
+    "word": "lloviendo",
+    "start": 24.54,
+    "end": 25.08,
+    "startFrame": 588,
+    "endFrame": 601,
+    "probability": 0.995
+  },
+  {
+    "word": "mucho.",
+    "start": 25.08,
+    "end": 25.44,
+    "startFrame": 601,
+    "endFrame": 610,
+    "probability": 0.041
+  },
+  {
+    "word": "Falso,",
+    "start": 26.16,
+    "end": 26.68,
+    "startFrame": 627,
+    "endFrame": 640,
+    "probability": 0.891
+  },
+  {
+    "word": "las",
+    "start": 27.0,
+    "end": 27.1,
+    "startFrame": 647,
+    "endFrame": 650,
+    "probability": 0.991
+  },
+  {
+    "word": "lluvias",
+    "start": 27.1,
+    "end": 27.38,
+    "startFrame": 650,
+    "endFrame": 656,
+    "probability": 0.985
+  },
+  {
+    "word": "locales",
+    "start": 27.38,
+    "end": 27.8,
+    "startFrame": 656,
+    "endFrame": 667,
+    "probability": 0.997
+  },
+  {
+    "word": "intensas",
+    "start": 27.8,
+    "end": 28.46,
+    "startFrame": 667,
+    "endFrame": 682,
+    "probability": 0.987
+  },
+  {
+    "word": "no",
+    "start": 28.46,
+    "end": 29.04,
+    "startFrame": 682,
+    "endFrame": 696,
+    "probability": 0.971
+  },
+  {
+    "word": "son",
+    "start": 29.04,
+    "end": 29.38,
+    "startFrame": 696,
+    "endFrame": 704,
+    "probability": 0.998
+  },
+  {
+    "word": "el",
+    "start": 29.38,
+    "end": 29.54,
+    "startFrame": 704,
+    "endFrame": 708,
+    "probability": 0.994
+  },
+  {
+    "word": "único",
+    "start": 29.54,
+    "end": 29.76,
+    "startFrame": 708,
+    "endFrame": 714,
+    "probability": 0.994
+  },
+  {
+    "word": "detonante.",
+    "start": 29.76,
+    "end": 30.34,
+    "startFrame": 714,
+    "endFrame": 727,
+    "probability": 0.985
+  },
+  {
+    "word": "Muchas",
+    "start": 30.88,
+    "end": 31.26,
+    "startFrame": 740,
+    "endFrame": 749,
+    "probability": 0.97
+  },
+  {
+    "word": "veces",
+    "start": 31.26,
+    "end": 31.72,
+    "startFrame": 749,
+    "endFrame": 761,
+    "probability": 0.998
+  },
+  {
+    "word": "sufrimos",
+    "start": 31.72,
+    "end": 32.64,
+    "startFrame": 761,
+    "endFrame": 783,
+    "probability": 0.956
+  },
+  {
+    "word": "la",
+    "start": 32.64,
+    "end": 32.8,
+    "startFrame": 783,
+    "endFrame": 786,
+    "probability": 0.989
+  },
+  {
+    "word": "crecida",
+    "start": 32.8,
+    "end": 33.22,
+    "startFrame": 786,
+    "endFrame": 796,
+    "probability": 0.858
+  },
+  {
+    "word": "de",
+    "start": 33.22,
+    "end": 33.38,
+    "startFrame": 796,
+    "endFrame": 800,
+    "probability": 0.986
+  },
+  {
+    "word": "los",
+    "start": 33.38,
+    "end": 33.48,
+    "startFrame": 800,
+    "endFrame": 803,
+    "probability": 0.996
+  },
+  {
+    "word": "ríos",
+    "start": 33.48,
+    "end": 33.84,
+    "startFrame": 803,
+    "endFrame": 811,
+    "probability": 0.979
+  },
+  {
+    "word": "por",
+    "start": 33.84,
+    "end": 34.42,
+    "startFrame": 811,
+    "endFrame": 825,
+    "probability": 0.949
+  },
+  {
+    "word": "tormentas",
+    "start": 34.42,
+    "end": 35.24,
+    "startFrame": 825,
+    "endFrame": 845,
+    "probability": 0.996
+  },
+  {
+    "word": "que",
+    "start": 35.24,
+    "end": 35.7,
+    "startFrame": 845,
+    "endFrame": 856,
+    "probability": 0.949
+  },
+  {
+    "word": "ocurren",
+    "start": 35.7,
+    "end": 36.12,
+    "startFrame": 856,
+    "endFrame": 866,
+    "probability": 0.993
+  },
+  {
+    "word": "a",
+    "start": 36.12,
+    "end": 36.36,
+    "startFrame": 866,
+    "endFrame": 872,
+    "probability": 0.989
+  },
+  {
+    "word": "cientos",
+    "start": 36.36,
+    "end": 36.84,
+    "startFrame": 872,
+    "endFrame": 883,
+    "probability": 0.987
+  },
+  {
+    "word": "de",
+    "start": 36.84,
+    "end": 37.06,
+    "startFrame": 883,
+    "endFrame": 889,
+    "probability": 0.999
+  },
+  {
+    "word": "kilómetros.",
+    "start": 37.06,
+    "end": 37.62,
+    "startFrame": 889,
+    "endFrame": 902,
+    "probability": 0.989
+  },
+  {
+    "word": "Por",
+    "start": 38.18,
+    "end": 38.38,
+    "startFrame": 915,
+    "endFrame": 920,
+    "probability": 0.996
+  },
+  {
+    "word": "otro",
+    "start": 38.38,
+    "end": 38.56,
+    "startFrame": 920,
+    "endFrame": 925,
+    "probability": 0.998
+  },
+  {
+    "word": "lado,",
+    "start": 38.56,
+    "end": 38.92,
+    "startFrame": 925,
+    "endFrame": 933,
+    "probability": 0.998
+  },
+  {
+    "word": "cuando",
+    "start": 39.14,
+    "end": 39.26,
+    "startFrame": 938,
+    "endFrame": 941,
+    "probability": 0.996
+  },
+  {
+    "word": "la",
+    "start": 39.26,
+    "end": 39.46,
+    "startFrame": 941,
+    "endFrame": 946,
+    "probability": 0.999
+  },
+  {
+    "word": "lluvia",
+    "start": 39.46,
+    "end": 39.72,
+    "startFrame": 946,
+    "endFrame": 952,
+    "probability": 0.997
+  },
+  {
+    "word": "cae",
+    "start": 39.72,
+    "end": 40.06,
+    "startFrame": 952,
+    "endFrame": 960,
+    "probability": 0.993
+  },
+  {
+    "word": "directamente",
+    "start": 40.06,
+    "end": 40.56,
+    "startFrame": 960,
+    "endFrame": 972,
+    "probability": 0.996
+  },
+  {
+    "word": "sobre",
+    "start": 40.56,
+    "end": 41.28,
+    "startFrame": 972,
+    "endFrame": 990,
+    "probability": 0.994
+  },
+  {
+    "word": "nuestra",
+    "start": 41.28,
+    "end": 41.56,
+    "startFrame": 990,
+    "endFrame": 996,
+    "probability": 0.995
+  },
+  {
+    "word": "ciudad,",
+    "start": 41.56,
+    "end": 42.1,
+    "startFrame": 996,
+    "endFrame": 1009,
+    "probability": 0.999
+  },
+  {
+    "word": "entran",
+    "start": 42.46,
+    "end": 42.9,
+    "startFrame": 1018,
+    "endFrame": 1029,
+    "probability": 0.981
+  },
+  {
+    "word": "en",
+    "start": 42.9,
+    "end": 43.08,
+    "startFrame": 1029,
+    "endFrame": 1033,
+    "probability": 0.997
+  },
+  {
+    "word": "juego",
+    "start": 43.08,
+    "end": 43.28,
+    "startFrame": 1033,
+    "endFrame": 1038,
+    "probability": 0.993
+  },
+  {
+    "word": "el",
+    "start": 43.28,
+    "end": 43.82,
+    "startFrame": 1038,
+    "endFrame": 1051,
+    "probability": 0.995
+  },
+  {
+    "word": "escurrimiento",
+    "start": 43.82,
+    "end": 44.48,
+    "startFrame": 1051,
+    "endFrame": 1066,
+    "probability": 0.988
+  },
+  {
+    "word": "y",
+    "start": 44.48,
+    "end": 44.78,
+    "startFrame": 1066,
+    "endFrame": 1074,
+    "probability": 0.998
+  },
+  {
+    "word": "la",
+    "start": 44.78,
+    "end": 44.9,
+    "startFrame": 1074,
+    "endFrame": 1077,
+    "probability": 0.993
+  },
+  {
+    "word": "saturación",
+    "start": 44.9,
+    "end": 45.5,
+    "startFrame": 1077,
+    "endFrame": 1091,
+    "probability": 0.996
+  },
+  {
+    "word": "de",
+    "start": 45.5,
+    "end": 45.68,
+    "startFrame": 1091,
+    "endFrame": 1095,
+    "probability": 0.998
+  },
+  {
+    "word": "los",
+    "start": 45.68,
+    "end": 45.78,
+    "startFrame": 1095,
+    "endFrame": 1098,
+    "probability": 0.993
+  },
+  {
+    "word": "suelos.",
+    "start": 45.78,
+    "end": 46.24,
+    "startFrame": 1098,
+    "endFrame": 1109,
+    "probability": 0.993
+  },
+  {
+    "word": "Por",
+    "start": 46.98,
+    "end": 47.2,
+    "startFrame": 1126,
+    "endFrame": 1132,
+    "probability": 0.994
+  },
+  {
+    "word": "eso",
+    "start": 47.2,
+    "end": 47.5,
+    "startFrame": 1132,
+    "endFrame": 1139,
+    "probability": 0.995
+  },
+  {
+    "word": "en",
+    "start": 47.5,
+    "end": 47.84,
+    "startFrame": 1139,
+    "endFrame": 1147,
+    "probability": 0.363
+  },
+  {
+    "word": "nuestra",
+    "start": 47.84,
+    "end": 48.14,
+    "startFrame": 1147,
+    "endFrame": 1154,
+    "probability": 0.998
+  },
+  {
+    "word": "provincia",
+    "start": 48.14,
+    "end": 48.8,
+    "startFrame": 1154,
+    "endFrame": 1170,
+    "probability": 0.989
+  },
+  {
+    "word": "es",
+    "start": 48.8,
+    "end": 49.16,
+    "startFrame": 1170,
+    "endFrame": 1179,
+    "probability": 0.894
+  },
+  {
+    "word": "tan",
+    "start": 49.16,
+    "end": 49.34,
+    "startFrame": 1179,
+    "endFrame": 1183,
+    "probability": 0.997
+  },
+  {
+    "word": "importante",
+    "start": 49.34,
+    "end": 49.88,
+    "startFrame": 1183,
+    "endFrame": 1196,
+    "probability": 0.999
+  },
+  {
+    "word": "la",
+    "start": 49.88,
+    "end": 50.08,
+    "startFrame": 1196,
+    "endFrame": 1201,
+    "probability": 0.998
+  },
+  {
+    "word": "protección",
+    "start": 50.08,
+    "end": 50.56,
+    "startFrame": 1201,
+    "endFrame": 1212,
+    "probability": 0.998
+  },
+  {
+    "word": "de",
+    "start": 50.56,
+    "end": 50.74,
+    "startFrame": 1212,
+    "endFrame": 1217,
+    "probability": 0.999
+  },
+  {
+    "word": "los",
+    "start": 50.74,
+    "end": 50.92,
+    "startFrame": 1217,
+    "endFrame": 1221,
+    "probability": 0.059
+  },
+  {
+    "word": "húmedales",
+    "start": 50.92,
+    "end": 51.62,
+    "startFrame": 1221,
+    "endFrame": 1238,
+    "probability": 0.746
+  },
+  {
+    "word": "que",
+    "start": 51.62,
+    "end": 52.28,
+    "startFrame": 1238,
+    "endFrame": 1253,
+    "probability": 0.536
+  },
+  {
+    "word": "actúan",
+    "start": 52.28,
+    "end": 52.78,
+    "startFrame": 1253,
+    "endFrame": 1265,
+    "probability": 0.983
+  },
+  {
+    "word": "como",
+    "start": 52.78,
+    "end": 53.08,
+    "startFrame": 1265,
+    "endFrame": 1273,
+    "probability": 0.987
+  },
+  {
+    "word": "una",
+    "start": 53.08,
+    "end": 53.28,
+    "startFrame": 1273,
+    "endFrame": 1277,
+    "probability": 0.967
+  },
+  {
+    "word": "esponja",
+    "start": 53.28,
+    "end": 53.82,
+    "startFrame": 1277,
+    "endFrame": 1290,
+    "probability": 0.982
+  },
+  {
+    "word": "natural,",
+    "start": 53.82,
+    "end": 54.48,
+    "startFrame": 1290,
+    "endFrame": 1306,
+    "probability": 0.995
+  },
+  {
+    "word": "absorbiendo",
+    "start": 54.84,
+    "end": 55.74,
+    "startFrame": 1315,
+    "endFrame": 1336,
+    "probability": 0.971
+  },
+  {
+    "word": "y",
+    "start": 55.74,
+    "end": 56.16,
+    "startFrame": 1336,
+    "endFrame": 1346,
+    "probability": 0.983
+  },
+  {
+    "word": "reteniendo",
+    "start": 56.16,
+    "end": 56.86,
+    "startFrame": 1346,
+    "endFrame": 1363,
+    "probability": 0.993
+  },
+  {
+    "word": "el",
+    "start": 56.86,
+    "end": 57.14,
+    "startFrame": 1363,
+    "endFrame": 1370,
+    "probability": 0.994
+  },
+  {
+    "word": "exceso",
+    "start": 57.14,
+    "end": 57.62,
+    "startFrame": 1370,
+    "endFrame": 1381,
+    "probability": 0.995
+  },
+  {
+    "word": "de",
+    "start": 57.62,
+    "end": 57.74,
+    "startFrame": 1381,
+    "endFrame": 1384,
+    "probability": 0.987
+  },
+  {
+    "word": "agua.",
+    "start": 57.74,
+    "end": 57.96,
+    "startFrame": 1384,
+    "endFrame": 1390,
+    "probability": 0.999
+  },
+  {
+    "word": "Mito",
+    "start": 58.44,
+    "end": 58.94,
+    "startFrame": 1401,
+    "endFrame": 1413,
+    "probability": 0.471
+  },
+  {
+    "word": "2.",
+    "start": 58.94,
+    "end": 59.4,
+    "startFrame": 1413,
+    "endFrame": 1424,
+    "probability": 0.537
+  },
+  {
+    "word": "Si",
+    "start": 59.72,
+    "end": 59.96,
+    "startFrame": 1432,
+    "endFrame": 1438,
+    "probability": 0.804
+  },
+  {
+    "word": "vivo",
+    "start": 59.96,
+    "end": 60.28,
+    "startFrame": 1438,
+    "endFrame": 1445,
+    "probability": 0.973
+  },
+  {
+    "word": "lejos",
+    "start": 60.28,
+    "end": 60.72,
+    "startFrame": 1445,
+    "endFrame": 1456,
+    "probability": 0.982
+  },
+  {
+    "word": "del",
+    "start": 60.72,
+    "end": 60.94,
+    "startFrame": 1456,
+    "endFrame": 1461,
+    "probability": 0.995
+  },
+  {
+    "word": "río,",
+    "start": 60.94,
+    "end": 61.22,
+    "startFrame": 1461,
+    "endFrame": 1468,
+    "probability": 0.963
+  },
+  {
+    "word": "el",
+    "start": 61.56,
+    "end": 61.62,
+    "startFrame": 1476,
+    "endFrame": 1477,
+    "probability": 0.998
+  },
+  {
+    "word": "agua",
+    "start": 61.62,
+    "end": 61.94,
+    "startFrame": 1477,
+    "endFrame": 1485,
+    "probability": 0.999
+  },
+  {
+    "word": "no",
+    "start": 61.94,
+    "end": 62.24,
+    "startFrame": 1485,
+    "endFrame": 1492,
+    "probability": 0.996
+  },
+  {
+    "word": "me",
+    "start": 62.24,
+    "end": 62.4,
+    "startFrame": 1492,
+    "endFrame": 1496,
+    "probability": 0.997
+  },
+  {
+    "word": "llega.",
+    "start": 62.4,
+    "end": 62.7,
+    "startFrame": 1496,
+    "endFrame": 1503,
+    "probability": 0.986
+  },
+  {
+    "word": "Error,",
+    "start": 63.4,
+    "end": 63.84,
+    "startFrame": 1520,
+    "endFrame": 1531,
+    "probability": 0.979
+  },
+  {
+    "word": "existen",
+    "start": 64.36,
+    "end": 65.08,
+    "startFrame": 1543,
+    "endFrame": 1560,
+    "probability": 0.982
+  },
+  {
+    "word": "inundaciones",
+    "start": 65.08,
+    "end": 65.68,
+    "startFrame": 1560,
+    "endFrame": 1575,
+    "probability": 0.996
+  },
+  {
+    "word": "repentinas",
+    "start": 65.68,
+    "end": 66.72,
+    "startFrame": 1575,
+    "endFrame": 1600,
+    "probability": 0.989
+  },
+  {
+    "word": "por",
+    "start": 66.72,
+    "end": 67.06,
+    "startFrame": 1600,
+    "endFrame": 1608,
+    "probability": 0.928
+  },
+  {
+    "word": "lluvias",
+    "start": 67.06,
+    "end": 67.46,
+    "startFrame": 1608,
+    "endFrame": 1617,
+    "probability": 0.989
+  },
+  {
+    "word": "torrenciales",
+    "start": 67.46,
+    "end": 68.38,
+    "startFrame": 1617,
+    "endFrame": 1639,
+    "probability": 0.986
+  },
+  {
+    "word": "que",
+    "start": 68.38,
+    "end": 68.82,
+    "startFrame": 1639,
+    "endFrame": 1650,
+    "probability": 0.869
+  },
+  {
+    "word": "pueden",
+    "start": 68.82,
+    "end": 69.12,
+    "startFrame": 1650,
+    "endFrame": 1657,
+    "probability": 0.994
+  },
+  {
+    "word": "pasar",
+    "start": 69.12,
+    "end": 69.42,
+    "startFrame": 1657,
+    "endFrame": 1664,
+    "probability": 0.998
+  },
+  {
+    "word": "en",
+    "start": 69.42,
+    "end": 69.8,
+    "startFrame": 1664,
+    "endFrame": 1674,
+    "probability": 0.998
+  },
+  {
+    "word": "cualquier",
+    "start": 69.8,
+    "end": 70.18,
+    "startFrame": 1674,
+    "endFrame": 1683,
+    "probability": 0.999
+  },
+  {
+    "word": "barrio.",
+    "start": 70.18,
+    "end": 70.74,
+    "startFrame": 1683,
+    "endFrame": 1696,
+    "probability": 0.998
+  },
+  {
+    "word": "Si",
+    "start": 71.12,
+    "end": 71.26,
+    "startFrame": 1705,
+    "endFrame": 1709,
+    "probability": 0.992
+  },
+  {
+    "word": "los",
+    "start": 71.26,
+    "end": 71.42,
+    "startFrame": 1709,
+    "endFrame": 1712,
+    "probability": 0.998
+  },
+  {
+    "word": "desagües",
+    "start": 71.42,
+    "end": 71.96,
+    "startFrame": 1712,
+    "endFrame": 1725,
+    "probability": 0.857
+  },
+  {
+    "word": "están",
+    "start": 71.96,
+    "end": 72.24,
+    "startFrame": 1725,
+    "endFrame": 1732,
+    "probability": 0.992
+  },
+  {
+    "word": "tapados,",
+    "start": 72.24,
+    "end": 72.84,
+    "startFrame": 1732,
+    "endFrame": 1746,
+    "probability": 0.49
+  },
+  {
+    "word": "tu",
+    "start": 73.24,
+    "end": 73.38,
+    "startFrame": 1756,
+    "endFrame": 1759,
+    "probability": 0.932
+  },
+  {
+    "word": "calle",
+    "start": 73.38,
+    "end": 73.68,
+    "startFrame": 1759,
+    "endFrame": 1767,
+    "probability": 0.971
+  },
+  {
+    "word": "se",
+    "start": 73.68,
+    "end": 73.9,
+    "startFrame": 1767,
+    "endFrame": 1772,
+    "probability": 0.997
+  },
+  {
+    "word": "vuelve",
+    "start": 73.9,
+    "end": 74.24,
+    "startFrame": 1772,
+    "endFrame": 1780,
+    "probability": 0.996
+  },
+  {
+    "word": "un",
+    "start": 74.24,
+    "end": 74.5,
+    "startFrame": 1780,
+    "endFrame": 1786,
+    "probability": 0.998
+  },
+  {
+    "word": "río",
+    "start": 74.5,
+    "end": 74.8,
+    "startFrame": 1786,
+    "endFrame": 1793,
+    "probability": 0.956
+  },
+  {
+    "word": "temporal.",
+    "start": 74.8,
+    "end": 75.56,
+    "startFrame": 1793,
+    "endFrame": 1812,
+    "probability": 0.998
+  },
+  {
+    "word": "Acá",
+    "start": 76.16,
+    "end": 76.64,
+    "startFrame": 1826,
+    "endFrame": 1838,
+    "probability": 0.852
+  },
+  {
+    "word": "somos",
+    "start": 76.64,
+    "end": 77.06,
+    "startFrame": 1838,
+    "endFrame": 1848,
+    "probability": 0.987
+  },
+  {
+    "word": "todos",
+    "start": 77.06,
+    "end": 77.54,
+    "startFrame": 1848,
+    "endFrame": 1859,
+    "probability": 0.99
+  },
+  {
+    "word": "protagonistas.",
+    "start": 77.54,
+    "end": 78.44,
+    "startFrame": 1859,
+    "endFrame": 1881,
+    "probability": 0.996
+  },
+  {
+    "word": "Sacar",
+    "start": 78.96,
+    "end": 79.4,
+    "startFrame": 1893,
+    "endFrame": 1904,
+    "probability": 0.837
+  },
+  {
+    "word": "la",
+    "start": 79.4,
+    "end": 79.54,
+    "startFrame": 1904,
+    "endFrame": 1907,
+    "probability": 0.994
+  },
+  {
+    "word": "basura",
+    "start": 79.54,
+    "end": 79.96,
+    "startFrame": 1907,
+    "endFrame": 1917,
+    "probability": 0.995
+  },
+  {
+    "word": "a",
+    "start": 79.96,
+    "end": 80.26,
+    "startFrame": 1917,
+    "endFrame": 1924,
+    "probability": 0.983
+  },
+  {
+    "word": "horario,",
+    "start": 80.26,
+    "end": 80.64,
+    "startFrame": 1924,
+    "endFrame": 1933,
+    "probability": 0.958
+  },
+  {
+    "word": "no",
+    "start": 80.92,
+    "end": 81.0,
+    "startFrame": 1940,
+    "endFrame": 1942,
+    "probability": 0.994
+  },
+  {
+    "word": "tirar",
+    "start": 81.0,
+    "end": 81.26,
+    "startFrame": 1942,
+    "endFrame": 1948,
+    "probability": 0.985
+  },
+  {
+    "word": "plásticos",
+    "start": 81.26,
+    "end": 81.86,
+    "startFrame": 1948,
+    "endFrame": 1963,
+    "probability": 0.986
+  },
+  {
+    "word": "en",
+    "start": 81.86,
+    "end": 82.08,
+    "startFrame": 1963,
+    "endFrame": 1968,
+    "probability": 0.994
+  },
+  {
+    "word": "la",
+    "start": 82.08,
+    "end": 82.2,
+    "startFrame": 1968,
+    "endFrame": 1971,
+    "probability": 0.996
+  },
+  {
+    "word": "vía",
+    "start": 82.2,
+    "end": 82.38,
+    "startFrame": 1971,
+    "endFrame": 1975,
+    "probability": 0.981
+  },
+  {
+    "word": "pública",
+    "start": 82.38,
+    "end": 82.88,
+    "startFrame": 1975,
+    "endFrame": 1987,
+    "probability": 0.995
+  },
+  {
+    "word": "es",
+    "start": 82.88,
+    "end": 83.34,
+    "startFrame": 1987,
+    "endFrame": 1998,
+    "probability": 0.572
+  },
+  {
+    "word": "vital",
+    "start": 83.34,
+    "end": 83.7,
+    "startFrame": 1998,
+    "endFrame": 2007,
+    "probability": 0.999
+  },
+  {
+    "word": "para",
+    "start": 83.7,
+    "end": 84.34,
+    "startFrame": 2007,
+    "endFrame": 2022,
+    "probability": 0.984
+  },
+  {
+    "word": "que",
+    "start": 84.34,
+    "end": 84.5,
+    "startFrame": 2022,
+    "endFrame": 2026,
+    "probability": 0.998
+  },
+  {
+    "word": "el",
+    "start": 84.5,
+    "end": 84.66,
+    "startFrame": 2026,
+    "endFrame": 2030,
+    "probability": 0.997
+  },
+  {
+    "word": "agua",
+    "start": 84.66,
+    "end": 84.82,
+    "startFrame": 2030,
+    "endFrame": 2034,
+    "probability": 1.0
+  },
+  {
+    "word": "escurra",
+    "start": 84.82,
+    "end": 85.46,
+    "startFrame": 2034,
+    "endFrame": 2049,
+    "probability": 0.951
+  },
+  {
+    "word": "rápido",
+    "start": 85.46,
+    "end": 85.82,
+    "startFrame": 2049,
+    "endFrame": 2058,
+    "probability": 0.992
+  },
+  {
+    "word": "y",
+    "start": 85.82,
+    "end": 86.2,
+    "startFrame": 2058,
+    "endFrame": 2067,
+    "probability": 0.976
+  },
+  {
+    "word": "no",
+    "start": 86.2,
+    "end": 86.38,
+    "startFrame": 2067,
+    "endFrame": 2071,
+    "probability": 0.997
+  },
+  {
+    "word": "nos",
+    "start": 86.38,
+    "end": 86.58,
+    "startFrame": 2071,
+    "endFrame": 2076,
+    "probability": 0.908
+  },
+  {
+    "word": "tape.",
+    "start": 86.58,
+    "end": 86.82,
+    "startFrame": 2076,
+    "endFrame": 2082,
+    "probability": 0.736
+  },
+  {
+    "word": "Mito",
+    "start": 87.42,
+    "end": 87.8,
+    "startFrame": 2096,
+    "endFrame": 2105,
+    "probability": 0.602
+  },
+  {
+    "word": "3.",
+    "start": 87.8,
+    "end": 88.16,
+    "startFrame": 2105,
+    "endFrame": 2114,
+    "probability": 0.703
+  },
+  {
+    "word": "Si",
+    "start": 88.7,
+    "end": 88.88,
+    "startFrame": 2127,
+    "endFrame": 2131,
+    "probability": 0.944
+  },
+  {
+    "word": "la",
+    "start": 88.88,
+    "end": 89.06,
+    "startFrame": 2131,
+    "endFrame": 2135,
+    "probability": 0.998
+  },
+  {
+    "word": "calle",
+    "start": 89.06,
+    "end": 89.34,
+    "startFrame": 2135,
+    "endFrame": 2142,
+    "probability": 0.986
+  },
+  {
+    "word": "está",
+    "start": 89.34,
+    "end": 89.6,
+    "startFrame": 2142,
+    "endFrame": 2148,
+    "probability": 0.99
+  },
+  {
+    "word": "inundada",
+    "start": 89.6,
+    "end": 90.22,
+    "startFrame": 2148,
+    "endFrame": 2163,
+    "probability": 0.994
+  },
+  {
+    "word": "pero",
+    "start": 90.22,
+    "end": 90.54,
+    "startFrame": 2163,
+    "endFrame": 2171,
+    "probability": 0.624
+  },
+  {
+    "word": "el",
+    "start": 90.54,
+    "end": 90.7,
+    "startFrame": 2171,
+    "endFrame": 2175,
+    "probability": 0.996
+  },
+  {
+    "word": "agua",
+    "start": 90.7,
+    "end": 90.86,
+    "startFrame": 2175,
+    "endFrame": 2178,
+    "probability": 0.998
+  },
+  {
+    "word": "está",
+    "start": 90.86,
+    "end": 91.1,
+    "startFrame": 2178,
+    "endFrame": 2184,
+    "probability": 0.981
+  },
+  {
+    "word": "bajita,",
+    "start": 91.1,
+    "end": 91.54,
+    "startFrame": 2184,
+    "endFrame": 2195,
+    "probability": 0.99
+  },
+  {
+    "word": "cruzo",
+    "start": 91.82,
+    "end": 92.2,
+    "startFrame": 2201,
+    "endFrame": 2211,
+    "probability": 0.987
+  },
+  {
+    "word": "igual.",
+    "start": 92.2,
+    "end": 92.58,
+    "startFrame": 2211,
+    "endFrame": 2220,
+    "probability": 0.987
+  },
+  {
+    "word": "Peligro,",
+    "start": 93.28,
+    "end": 93.86,
+    "startFrame": 2236,
+    "endFrame": 2250,
+    "probability": 0.971
+  },
+  {
+    "word": "intentar",
+    "start": 93.86,
+    "end": 94.5,
+    "startFrame": 2250,
+    "endFrame": 2266,
+    "probability": 0.002
+  },
+  {
+    "word": "cruzar",
+    "start": 94.5,
+    "end": 95.42,
+    "startFrame": 2266,
+    "endFrame": 2288,
+    "probability": 0.995
+  },
+  {
+    "word": "es",
+    "start": 95.42,
+    "end": 95.7,
+    "startFrame": 2288,
+    "endFrame": 2295,
+    "probability": 0.991
+  },
+  {
+    "word": "una",
+    "start": 95.7,
+    "end": 95.94,
+    "startFrame": 2295,
+    "endFrame": 2300,
+    "probability": 0.996
+  },
+  {
+    "word": "pésima",
+    "start": 95.94,
+    "end": 96.78,
+    "startFrame": 2300,
+    "endFrame": 2320,
+    "probability": 0.995
+  },
+  {
+    "word": "idea.",
+    "start": 96.78,
+    "end": 97.3,
+    "startFrame": 2320,
+    "endFrame": 2333,
+    "probability": 0.989
+  },
+  {
+    "word": "Ese",
+    "start": 97.64,
+    "end": 98.0,
+    "startFrame": 2341,
+    "endFrame": 2350,
+    "probability": 0.909
+  },
+  {
+    "word": "charco",
+    "start": 98.0,
+    "end": 98.48,
+    "startFrame": 2350,
+    "endFrame": 2361,
+    "probability": 0.953
+  },
+  {
+    "word": "gigante",
+    "start": 98.48,
+    "end": 99.26,
+    "startFrame": 2361,
+    "endFrame": 2380,
+    "probability": 0.997
+  },
+  {
+    "word": "y",
+    "start": 99.26,
+    "end": 99.5,
+    "startFrame": 2380,
+    "endFrame": 2386,
+    "probability": 0.984
+  },
+  {
+    "word": "turbio",
+    "start": 99.5,
+    "end": 100.26,
+    "startFrame": 2386,
+    "endFrame": 2404,
+    "probability": 0.975
+  },
+  {
+    "word": "esconde",
+    "start": 100.26,
+    "end": 100.86,
+    "startFrame": 2404,
+    "endFrame": 2418,
+    "probability": 0.956
+  },
+  {
+    "word": "trampas,",
+    "start": 100.86,
+    "end": 101.5,
+    "startFrame": 2418,
+    "endFrame": 2434,
+    "probability": 0.919
+  },
+  {
+    "word": "alcantarillas",
+    "start": 102.2,
+    "end": 102.96,
+    "startFrame": 2450,
+    "endFrame": 2469,
+    "probability": 0.961
+  },
+  {
+    "word": "destapadas,",
+    "start": 102.96,
+    "end": 103.84,
+    "startFrame": 2469,
+    "endFrame": 2490,
+    "probability": 0.997
+  },
+  {
+    "word": "pozos",
+    "start": 104.64,
+    "end": 105.14,
+    "startFrame": 2509,
+    "endFrame": 2521,
+    "probability": 0.934
+  },
+  {
+    "word": "o",
+    "start": 105.14,
+    "end": 105.46,
+    "startFrame": 2521,
+    "endFrame": 2529,
+    "probability": 0.909
+  },
+  {
+    "word": "desniveles",
+    "start": 105.46,
+    "end": 106.1,
+    "startFrame": 2529,
+    "endFrame": 2544,
+    "probability": 0.98
+  },
+  {
+    "word": "que",
+    "start": 106.1,
+    "end": 107.0,
+    "startFrame": 2544,
+    "endFrame": 2565,
+    "probability": 0.827
+  },
+  {
+    "word": "no",
+    "start": 107.0,
+    "end": 107.18,
+    "startFrame": 2565,
+    "endFrame": 2570,
+    "probability": 0.998
+  },
+  {
+    "word": "se",
+    "start": 107.18,
+    "end": 107.36,
+    "startFrame": 2570,
+    "endFrame": 2574,
+    "probability": 0.983
+  },
+  {
+    "word": "ven",
+    "start": 107.36,
+    "end": 107.54,
+    "startFrame": 2574,
+    "endFrame": 2578,
+    "probability": 0.989
+  },
+  {
+    "word": "a",
+    "start": 107.54,
+    "end": 107.64,
+    "startFrame": 2578,
+    "endFrame": 2581,
+    "probability": 0.988
+  },
+  {
+    "word": "simple",
+    "start": 107.64,
+    "end": 107.88,
+    "startFrame": 2581,
+    "endFrame": 2587,
+    "probability": 0.993
+  },
+  {
+    "word": "vista.",
+    "start": 107.88,
+    "end": 108.26,
+    "startFrame": 2587,
+    "endFrame": 2596,
+    "probability": 0.994
+  },
+  {
+    "word": "Buscá",
+    "start": 108.7,
+    "end": 109.14,
+    "startFrame": 2606,
+    "endFrame": 2617,
+    "probability": 0.717
+  },
+  {
+    "word": "nomás",
+    "start": 109.14,
+    "end": 109.46,
+    "startFrame": 2617,
+    "endFrame": 2624,
+    "probability": 0.527
+  },
+  {
+    "word": "un",
+    "start": 109.46,
+    "end": 109.62,
+    "startFrame": 2624,
+    "endFrame": 2628,
+    "probability": 0.997
+  },
+  {
+    "word": "camino",
+    "start": 109.62,
+    "end": 109.86,
+    "startFrame": 2628,
+    "endFrame": 2634,
+    "probability": 0.994
+  },
+  {
+    "word": "alternativo",
+    "start": 109.86,
+    "end": 110.5,
+    "startFrame": 2634,
+    "endFrame": 2649,
+    "probability": 0.999
+  },
+  {
+    "word": "y",
+    "start": 110.5,
+    "end": 110.78,
+    "startFrame": 2649,
+    "endFrame": 2656,
+    "probability": 0.979
+  },
+  {
+    "word": "no",
+    "start": 110.78,
+    "end": 110.9,
+    "startFrame": 2656,
+    "endFrame": 2659,
+    "probability": 0.971
+  },
+  {
+    "word": "te",
+    "start": 110.9,
+    "end": 111.02,
+    "startFrame": 2659,
+    "endFrame": 2662,
+    "probability": 0.993
+  },
+  {
+    "word": "arriesgues.",
+    "start": 111.02,
+    "end": 111.54,
+    "startFrame": 2662,
+    "endFrame": 2674,
+    "probability": 0.817
+  },
+  {
+    "word": "Mito",
+    "start": 112.08,
+    "end": 112.48,
+    "startFrame": 2687,
+    "endFrame": 2697,
+    "probability": 0.835
+  },
+  {
+    "word": "4.",
+    "start": 112.48,
+    "end": 112.86,
+    "startFrame": 2697,
+    "endFrame": 2706,
+    "probability": 0.638
+  },
+  {
+    "word": "Si",
+    "start": 113.44,
+    "end": 113.58,
+    "startFrame": 2720,
+    "endFrame": 2723,
+    "probability": 0.896
+  },
+  {
+    "word": "ya",
+    "start": 113.58,
+    "end": 113.9,
+    "startFrame": 2723,
+    "endFrame": 2731,
+    "probability": 0.991
+  },
+  {
+    "word": "dejó",
+    "start": 113.9,
+    "end": 114.34,
+    "startFrame": 2731,
+    "endFrame": 2741,
+    "probability": 0.945
+  },
+  {
+    "word": "de",
+    "start": 114.34,
+    "end": 114.48,
+    "startFrame": 2741,
+    "endFrame": 2745,
+    "probability": 0.998
+  },
+  {
+    "word": "llover,",
+    "start": 114.48,
+    "end": 114.82,
+    "startFrame": 2745,
+    "endFrame": 2753,
+    "probability": 0.982
+  },
+  {
+    "word": "ya",
+    "start": 115.06,
+    "end": 115.22,
+    "startFrame": 2759,
+    "endFrame": 2763,
+    "probability": 0.986
+  },
+  {
+    "word": "pasó",
+    "start": 115.22,
+    "end": 115.52,
+    "startFrame": 2763,
+    "endFrame": 2770,
+    "probability": 0.959
+  },
+  {
+    "word": "el",
+    "start": 115.52,
+    "end": 115.62,
+    "startFrame": 2770,
+    "endFrame": 2772,
+    "probability": 0.996
+  },
+  {
+    "word": "peligro.",
+    "start": 115.62,
+    "end": 116.24,
+    "startFrame": 2772,
+    "endFrame": 2787,
+    "probability": 0.999
+  },
+  {
+    "word": "Falso.",
+    "start": 116.24,
+    "end": 117.2,
+    "startFrame": 2787,
+    "endFrame": 2810,
+    "probability": 0.608
+  },
+  {
+    "word": "La",
+    "start": 117.52,
+    "end": 117.82,
+    "startFrame": 2818,
+    "endFrame": 2825,
+    "probability": 0.98
+  },
+  {
+    "word": "pos",
+    "start": 117.82,
+    "end": 118.22,
+    "startFrame": 2825,
+    "endFrame": 2834,
+    "probability": 0.775
+  },
+  {
+    "word": "lluvia",
+    "start": 118.22,
+    "end": 118.86,
+    "startFrame": 2834,
+    "endFrame": 2850,
+    "probability": 0.792
+  },
+  {
+    "word": "esconde",
+    "start": 118.86,
+    "end": 119.42,
+    "startFrame": 2850,
+    "endFrame": 2863,
+    "probability": 0.987
+  },
+  {
+    "word": "otras",
+    "start": 119.42,
+    "end": 119.98,
+    "startFrame": 2863,
+    "endFrame": 2877,
+    "probability": 0.975
+  },
+  {
+    "word": "amenazas.",
+    "start": 119.98,
+    "end": 120.72,
+    "startFrame": 2877,
+    "endFrame": 2894,
+    "probability": 0.997
+  },
+  {
+    "word": "Si",
+    "start": 121.22,
+    "end": 121.54,
+    "startFrame": 2906,
+    "endFrame": 2914,
+    "probability": 0.909
+  },
+  {
+    "word": "ingresó",
+    "start": 121.54,
+    "end": 122.04,
+    "startFrame": 2914,
+    "endFrame": 2926,
+    "probability": 0.96
+  },
+  {
+    "word": "agua",
+    "start": 122.04,
+    "end": 122.32,
+    "startFrame": 2926,
+    "endFrame": 2933,
+    "probability": 0.994
+  },
+  {
+    "word": "dentro",
+    "start": 122.32,
+    "end": 122.66,
+    "startFrame": 2933,
+    "endFrame": 2941,
+    "probability": 0.981
+  },
+  {
+    "word": "de",
+    "start": 122.66,
+    "end": 122.9,
+    "startFrame": 2941,
+    "endFrame": 2947,
+    "probability": 0.996
+  },
+  {
+    "word": "casa,",
+    "start": 122.9,
+    "end": 123.2,
+    "startFrame": 2947,
+    "endFrame": 2954,
+    "probability": 0.993
+  },
+  {
+    "word": "el",
+    "start": 123.56,
+    "end": 123.62,
+    "startFrame": 2962,
+    "endFrame": 2964,
+    "probability": 0.989
+  },
+  {
+    "word": "riesgo",
+    "start": 123.62,
+    "end": 123.94,
+    "startFrame": 2964,
+    "endFrame": 2972,
+    "probability": 0.998
+  },
+  {
+    "word": "eléctrico",
+    "start": 123.94,
+    "end": 124.48,
+    "startFrame": 2972,
+    "endFrame": 2985,
+    "probability": 0.994
+  },
+  {
+    "word": "es",
+    "start": 124.48,
+    "end": 124.84,
+    "startFrame": 2985,
+    "endFrame": 2993,
+    "probability": 0.994
+  },
+  {
+    "word": "altísimo.",
+    "start": 124.84,
+    "end": 125.64,
+    "startFrame": 2993,
+    "endFrame": 3012,
+    "probability": 0.992
+  },
+  {
+    "word": "Nunca",
+    "start": 126.06,
+    "end": 126.5,
+    "startFrame": 3022,
+    "endFrame": 3033,
+    "probability": 0.99
+  },
+  {
+    "word": "deben",
+    "start": 126.5,
+    "end": 126.7,
+    "startFrame": 3033,
+    "endFrame": 3038,
+    "probability": 0.99
+  },
+  {
+    "word": "tocar",
+    "start": 126.7,
+    "end": 127.04,
+    "startFrame": 3038,
+    "endFrame": 3046,
+    "probability": 0.994
+  },
+  {
+    "word": "electrodomésticos",
+    "start": 127.04,
+    "end": 128.22,
+    "startFrame": 3046,
+    "endFrame": 3074,
+    "probability": 0.932
+  },
+  {
+    "word": "ni",
+    "start": 128.22,
+    "end": 128.8,
+    "startFrame": 3074,
+    "endFrame": 3088,
+    "probability": 0.844
+  },
+  {
+    "word": "paredes",
+    "start": 128.8,
+    "end": 129.36,
+    "startFrame": 3088,
+    "endFrame": 3102,
+    "probability": 0.997
+  },
+  {
+    "word": "húmedas",
+    "start": 129.36,
+    "end": 129.88,
+    "startFrame": 3102,
+    "endFrame": 3114,
+    "probability": 0.985
+  },
+  {
+    "word": "sin",
+    "start": 129.88,
+    "end": 130.18,
+    "startFrame": 3114,
+    "endFrame": 3121,
+    "probability": 0.921
+  },
+  {
+    "word": "cortar",
+    "start": 130.18,
+    "end": 130.58,
+    "startFrame": 3121,
+    "endFrame": 3131,
+    "probability": 0.998
+  },
+  {
+    "word": "la",
+    "start": 130.58,
+    "end": 130.84,
+    "startFrame": 3131,
+    "endFrame": 3137,
+    "probability": 0.989
+  },
+  {
+    "word": "corriente",
+    "start": 130.84,
+    "end": 131.3,
+    "startFrame": 3137,
+    "endFrame": 3148,
+    "probability": 0.999
+  },
+  {
+    "word": "antes.",
+    "start": 131.3,
+    "end": 131.8,
+    "startFrame": 3148,
+    "endFrame": 3160,
+    "probability": 0.977
+  },
+  {
+    "word": "Y",
+    "start": 132.46,
+    "end": 132.66,
+    "startFrame": 3176,
+    "endFrame": 3181,
+    "probability": 0.854
+  },
+  {
+    "word": "afuera",
+    "start": 132.66,
+    "end": 133.1,
+    "startFrame": 3181,
+    "endFrame": 3191,
+    "probability": 0.984
+  },
+  {
+    "word": "el",
+    "start": 133.1,
+    "end": 133.42,
+    "startFrame": 3191,
+    "endFrame": 3199,
+    "probability": 0.665
+  },
+  {
+    "word": "agua",
+    "start": 133.42,
+    "end": 133.62,
+    "startFrame": 3199,
+    "endFrame": 3204,
+    "probability": 0.998
+  },
+  {
+    "word": "estancada",
+    "start": 133.62,
+    "end": 134.1,
+    "startFrame": 3204,
+    "endFrame": 3215,
+    "probability": 0.994
+  },
+  {
+    "word": "puede",
+    "start": 134.1,
+    "end": 134.34,
+    "startFrame": 3215,
+    "endFrame": 3221,
+    "probability": 0.986
+  },
+  {
+    "word": "estar",
+    "start": 134.34,
+    "end": 134.54,
+    "startFrame": 3221,
+    "endFrame": 3226,
+    "probability": 0.99
+  },
+  {
+    "word": "contaminada",
+    "start": 134.54,
+    "end": 135.26,
+    "startFrame": 3226,
+    "endFrame": 3243,
+    "probability": 0.997
+  },
+  {
+    "word": "y",
+    "start": 135.26,
+    "end": 135.5,
+    "startFrame": 3243,
+    "endFrame": 3249,
+    "probability": 0.892
+  },
+  {
+    "word": "es",
+    "start": 135.5,
+    "end": 135.62,
+    "startFrame": 3249,
+    "endFrame": 3252,
+    "probability": 0.995
+  },
+  {
+    "word": "el",
+    "start": 135.62,
+    "end": 135.74,
+    "startFrame": 3252,
+    "endFrame": 3255,
+    "probability": 0.995
+  },
+  {
+    "word": "criadero",
+    "start": 135.74,
+    "end": 136.18,
+    "startFrame": 3255,
+    "endFrame": 3265,
+    "probability": 0.964
+  },
+  {
+    "word": "VIP",
+    "start": 136.18,
+    "end": 136.58,
+    "startFrame": 3265,
+    "endFrame": 3275,
+    "probability": 0.628
+  },
+  {
+    "word": "del",
+    "start": 136.58,
+    "end": 136.92,
+    "startFrame": 3275,
+    "endFrame": 3283,
+    "probability": 0.942
+  },
+  {
+    "word": "mosquito",
+    "start": 136.92,
+    "end": 137.3,
+    "startFrame": 3283,
+    "endFrame": 3292,
+    "probability": 0.756
+  },
+  {
+    "word": "del",
+    "start": 137.3,
+    "end": 137.56,
+    "startFrame": 3292,
+    "endFrame": 3298,
+    "probability": 0.832
+  },
+  {
+    "word": "dengue.",
+    "start": 137.56,
+    "end": 137.9,
+    "startFrame": 3298,
+    "endFrame": 3306,
+    "probability": 0.962
+  },
+  {
+    "word": "No",
+    "start": 138.3,
+    "end": 138.8,
+    "startFrame": 3316,
+    "endFrame": 3328,
+    "probability": 0.941
+  },
+  {
+    "word": "debemos",
+    "start": 138.8,
+    "end": 139.22,
+    "startFrame": 3328,
+    "endFrame": 3338,
+    "probability": 0.999
+  },
+  {
+    "word": "bajar",
+    "start": 139.22,
+    "end": 139.62,
+    "startFrame": 3338,
+    "endFrame": 3348,
+    "probability": 0.995
+  },
+  {
+    "word": "la",
+    "start": 139.62,
+    "end": 139.76,
+    "startFrame": 3348,
+    "endFrame": 3351,
+    "probability": 0.994
+  },
+  {
+    "word": "guardia.",
+    "start": 139.76,
+    "end": 140.2,
+    "startFrame": 3351,
+    "endFrame": 3361,
+    "probability": 0.995
+  },
+  {
+    "word": "Y",
+    "start": 140.56,
+    "end": 140.74,
+    "startFrame": 3370,
+    "endFrame": 3374,
+    "probability": 0.952
+  },
+  {
+    "word": "este",
+    "start": 140.74,
+    "end": 140.96,
+    "startFrame": 3374,
+    "endFrame": 3380,
+    "probability": 0.91
+  },
+  {
+    "word": "sí",
+    "start": 140.96,
+    "end": 141.18,
+    "startFrame": 3380,
+    "endFrame": 3385,
+    "probability": 0.838
+  },
+  {
+    "word": "que",
+    "start": 141.18,
+    "end": 141.28,
+    "startFrame": 3385,
+    "endFrame": 3387,
+    "probability": 0.955
+  },
+  {
+    "word": "ya",
+    "start": 141.28,
+    "end": 141.52,
+    "startFrame": 3387,
+    "endFrame": 3393,
+    "probability": 0.97
+  },
+  {
+    "word": "es",
+    "start": 141.52,
+    "end": 141.68,
+    "startFrame": 3393,
+    "endFrame": 3397,
+    "probability": 0.997
+  },
+  {
+    "word": "un",
+    "start": 141.68,
+    "end": 141.82,
+    "startFrame": 3397,
+    "endFrame": 3400,
+    "probability": 0.992
+  },
+  {
+    "word": "montón.",
+    "start": 141.82,
+    "end": 142.18,
+    "startFrame": 3400,
+    "endFrame": 3409,
+    "probability": 0.995
+  },
+  {
+    "word": "Mito",
+    "start": 142.72,
+    "end": 143.16,
+    "startFrame": 3422,
+    "endFrame": 3432,
+    "probability": 0.649
+  },
+  {
+    "word": "5.",
+    "start": 143.16,
+    "end": 143.62,
+    "startFrame": 3432,
+    "endFrame": 3443,
+    "probability": 0.601
+  },
+  {
+    "word": "El",
+    "start": 143.62,
+    "end": 144.3,
+    "startFrame": 3443,
+    "endFrame": 3460,
+    "probability": 0.739
+  },
+  {
+    "word": "clima",
+    "start": 144.3,
+    "end": 144.78,
+    "startFrame": 3460,
+    "endFrame": 3471,
+    "probability": 0.961
+  },
+  {
+    "word": "está",
+    "start": 144.78,
+    "end": 145.12,
+    "startFrame": 3471,
+    "endFrame": 3479,
+    "probability": 0.959
+  },
+  {
+    "word": "controlado",
+    "start": 145.12,
+    "end": 145.74,
+    "startFrame": 3479,
+    "endFrame": 3494,
+    "probability": 0.993
+  },
+  {
+    "word": "por",
+    "start": 145.74,
+    "end": 146.04,
+    "startFrame": 3494,
+    "endFrame": 3501,
+    "probability": 0.998
+  },
+  {
+    "word": "corporaciones",
+    "start": 146.04,
+    "end": 146.7,
+    "startFrame": 3501,
+    "endFrame": 3517,
+    "probability": 0.988
+  },
+  {
+    "word": "secretas",
+    "start": 146.7,
+    "end": 147.44,
+    "startFrame": 3517,
+    "endFrame": 3535,
+    "probability": 0.995
+  },
+  {
+    "word": "y",
+    "start": 147.44,
+    "end": 147.62,
+    "startFrame": 3535,
+    "endFrame": 3539,
+    "probability": 0.99
+  },
+  {
+    "word": "antenas",
+    "start": 147.62,
+    "end": 148.06,
+    "startFrame": 3539,
+    "endFrame": 3550,
+    "probability": 0.994
+  },
+  {
+    "word": "gigantes.",
+    "start": 148.06,
+    "end": 148.66,
+    "startFrame": 3550,
+    "endFrame": 3564,
+    "probability": 0.997
+  },
+  {
+    "word": "Ficción",
+    "start": 149.36,
+    "end": 150.04,
+    "startFrame": 3581,
+    "endFrame": 3597,
+    "probability": 0.96
+  },
+  {
+    "word": "pura.",
+    "start": 150.04,
+    "end": 150.58,
+    "startFrame": 3597,
+    "endFrame": 3610,
+    "probability": 0.991
+  },
+  {
+    "word": "Las",
+    "start": 150.98,
+    "end": 151.12,
+    "startFrame": 3620,
+    "endFrame": 3623,
+    "probability": 0.996
+  },
+  {
+    "word": "teorías",
+    "start": 151.12,
+    "end": 151.4,
+    "startFrame": 3623,
+    "endFrame": 3630,
+    "probability": 0.996
+  },
+  {
+    "word": "conspirativas",
+    "start": 151.4,
+    "end": 152.1,
+    "startFrame": 3630,
+    "endFrame": 3647,
+    "probability": 0.995
+  },
+  {
+    "word": "no",
+    "start": 152.1,
+    "end": 152.66,
+    "startFrame": 3647,
+    "endFrame": 3660,
+    "probability": 0.99
+  },
+  {
+    "word": "tienen",
+    "start": 152.66,
+    "end": 153.08,
+    "startFrame": 3660,
+    "endFrame": 3670,
+    "probability": 0.99
+  },
+  {
+    "word": "ningún",
+    "start": 153.08,
+    "end": 153.5,
+    "startFrame": 3670,
+    "endFrame": 3680,
+    "probability": 0.993
+  },
+  {
+    "word": "sustento",
+    "start": 153.5,
+    "end": 154.02,
+    "startFrame": 3680,
+    "endFrame": 3693,
+    "probability": 0.993
+  },
+  {
+    "word": "científico.",
+    "start": 154.02,
+    "end": 154.82,
+    "startFrame": 3693,
+    "endFrame": 3712,
+    "probability": 0.999
+  },
+  {
+    "word": "Lo",
+    "start": 155.16,
+    "end": 155.46,
+    "startFrame": 3720,
+    "endFrame": 3727,
+    "probability": 0.993
+  },
+  {
+    "word": "que",
+    "start": 155.46,
+    "end": 155.6,
+    "startFrame": 3727,
+    "endFrame": 3731,
+    "probability": 0.999
+  },
+  {
+    "word": "sí",
+    "start": 155.6,
+    "end": 155.84,
+    "startFrame": 3731,
+    "endFrame": 3736,
+    "probability": 0.926
+  },
+  {
+    "word": "es",
+    "start": 155.84,
+    "end": 156.06,
+    "startFrame": 3736,
+    "endFrame": 3742,
+    "probability": 0.983
+  },
+  {
+    "word": "real",
+    "start": 156.06,
+    "end": 156.38,
+    "startFrame": 3742,
+    "endFrame": 3749,
+    "probability": 0.996
+  },
+  {
+    "word": "y",
+    "start": 156.38,
+    "end": 156.72,
+    "startFrame": 3749,
+    "endFrame": 3758,
+    "probability": 0.931
+  },
+  {
+    "word": "está",
+    "start": 156.72,
+    "end": 157.04,
+    "startFrame": 3758,
+    "endFrame": 3765,
+    "probability": 0.969
+  },
+  {
+    "word": "comprobado",
+    "start": 157.04,
+    "end": 157.74,
+    "startFrame": 3765,
+    "endFrame": 3782,
+    "probability": 0.992
+  },
+  {
+    "word": "por",
+    "start": 157.74,
+    "end": 158.0,
+    "startFrame": 3782,
+    "endFrame": 3788,
+    "probability": 0.993
+  },
+  {
+    "word": "la",
+    "start": 158.0,
+    "end": 158.16,
+    "startFrame": 3788,
+    "endFrame": 3792,
+    "probability": 0.994
+  },
+  {
+    "word": "ciencia",
+    "start": 158.16,
+    "end": 158.64,
+    "startFrame": 3792,
+    "endFrame": 3804,
+    "probability": 0.982
+  },
+  {
+    "word": "es",
+    "start": 158.64,
+    "end": 159.18,
+    "startFrame": 3804,
+    "endFrame": 3817,
+    "probability": 0.899
+  },
+  {
+    "word": "que",
+    "start": 159.18,
+    "end": 159.28,
+    "startFrame": 3817,
+    "endFrame": 3819,
+    "probability": 0.999
+  },
+  {
+    "word": "la",
+    "start": 159.28,
+    "end": 159.38,
+    "startFrame": 3819,
+    "endFrame": 3821,
+    "probability": 0.998
+  },
+  {
+    "word": "actividad",
+    "start": 159.38,
+    "end": 159.78,
+    "startFrame": 3821,
+    "endFrame": 3831,
+    "probability": 0.998
+  },
+  {
+    "word": "humana",
+    "start": 159.78,
+    "end": 160.54,
+    "startFrame": 3831,
+    "endFrame": 3849,
+    "probability": 0.993
+  },
+  {
+    "word": "está",
+    "start": 160.54,
+    "end": 160.94,
+    "startFrame": 3849,
+    "endFrame": 3859,
+    "probability": 0.991
+  },
+  {
+    "word": "acelerando",
+    "start": 160.94,
+    "end": 161.6,
+    "startFrame": 3859,
+    "endFrame": 3875,
+    "probability": 0.995
+  },
+  {
+    "word": "el",
+    "start": 161.6,
+    "end": 161.72,
+    "startFrame": 3875,
+    "endFrame": 3877,
+    "probability": 0.99
+  },
+  {
+    "word": "calentamiento",
+    "start": 161.72,
+    "end": 162.26,
+    "startFrame": 3877,
+    "endFrame": 3890,
+    "probability": 0.989
+  },
+  {
+    "word": "global.",
+    "start": 162.26,
+    "end": 162.78,
+    "startFrame": 3890,
+    "endFrame": 3903,
+    "probability": 0.996
+  },
+  {
+    "word": "Nuestro",
+    "start": 163.38,
+    "end": 163.72,
+    "startFrame": 3917,
+    "endFrame": 3925,
+    "probability": 0.998
+  },
+  {
+    "word": "impacto",
+    "start": 163.72,
+    "end": 164.1,
+    "startFrame": 3925,
+    "endFrame": 3934,
+    "probability": 0.995
+  },
+  {
+    "word": "en",
+    "start": 164.1,
+    "end": 164.3,
+    "startFrame": 3934,
+    "endFrame": 3939,
+    "probability": 0.987
+  },
+  {
+    "word": "el",
+    "start": 164.3,
+    "end": 164.38,
+    "startFrame": 3939,
+    "endFrame": 3941,
+    "probability": 0.998
+  },
+  {
+    "word": "planeta,",
+    "start": 164.38,
+    "end": 164.68,
+    "startFrame": 3941,
+    "endFrame": 3948,
+    "probability": 0.997
+  },
+  {
+    "word": "combinado",
+    "start": 165.02,
+    "end": 165.5,
+    "startFrame": 3957,
+    "endFrame": 3968,
+    "probability": 0.991
+  },
+  {
+    "word": "con",
+    "start": 165.5,
+    "end": 165.74,
+    "startFrame": 3968,
+    "endFrame": 3974,
+    "probability": 0.995
+  },
+  {
+    "word": "ciclos",
+    "start": 165.74,
+    "end": 166.08,
+    "startFrame": 3974,
+    "endFrame": 3982,
+    "probability": 0.966
+  },
+  {
+    "word": "naturales",
+    "start": 166.08,
+    "end": 166.7,
+    "startFrame": 3982,
+    "endFrame": 3997,
+    "probability": 0.998
+  },
+  {
+    "word": "como",
+    "start": 166.7,
+    "end": 166.84,
+    "startFrame": 3997,
+    "endFrame": 4000,
+    "probability": 0.876
+  },
+  {
+    "word": "el",
+    "start": 166.84,
+    "end": 167.0,
+    "startFrame": 4000,
+    "endFrame": 4004,
+    "probability": 0.977
+  },
+  {
+    "word": "fenómeno",
+    "start": 167.0,
+    "end": 167.38,
+    "startFrame": 4004,
+    "endFrame": 4013,
+    "probability": 0.996
+  },
+  {
+    "word": "del",
+    "start": 167.38,
+    "end": 167.64,
+    "startFrame": 4013,
+    "endFrame": 4019,
+    "probability": 0.981
+  },
+  {
+    "word": "niño,",
+    "start": 167.64,
+    "end": 167.9,
+    "startFrame": 4019,
+    "endFrame": 4026,
+    "probability": 0.978
+  },
+  {
+    "word": "es",
+    "start": 168.5,
+    "end": 168.62,
+    "startFrame": 4040,
+    "endFrame": 4043,
+    "probability": 0.998
+  },
+  {
+    "word": "lo",
+    "start": 168.62,
+    "end": 168.74,
+    "startFrame": 4043,
+    "endFrame": 4046,
+    "probability": 0.998
+  },
+  {
+    "word": "que",
+    "start": 168.74,
+    "end": 168.86,
+    "startFrame": 4046,
+    "endFrame": 4049,
+    "probability": 0.998
+  },
+  {
+    "word": "provoca",
+    "start": 168.86,
+    "end": 169.28,
+    "startFrame": 4049,
+    "endFrame": 4059,
+    "probability": 0.994
+  },
+  {
+    "word": "que",
+    "start": 169.28,
+    "end": 169.46,
+    "startFrame": 4059,
+    "endFrame": 4063,
+    "probability": 0.998
+  },
+  {
+    "word": "las",
+    "start": 169.46,
+    "end": 169.64,
+    "startFrame": 4063,
+    "endFrame": 4067,
+    "probability": 0.993
+  },
+  {
+    "word": "lluvias",
+    "start": 169.64,
+    "end": 169.98,
+    "startFrame": 4067,
+    "endFrame": 4075,
+    "probability": 0.902
+  },
+  {
+    "word": "y",
+    "start": 169.98,
+    "end": 170.12,
+    "startFrame": 4075,
+    "endFrame": 4079,
+    "probability": 0.998
+  },
+  {
+    "word": "tormentas",
+    "start": 170.12,
+    "end": 170.74,
+    "startFrame": 4079,
+    "endFrame": 4094,
+    "probability": 0.998
+  },
+  {
+    "word": "sean",
+    "start": 170.74,
+    "end": 171.3,
+    "startFrame": 4094,
+    "endFrame": 4107,
+    "probability": 0.992
+  },
+  {
+    "word": "cada",
+    "start": 171.3,
+    "end": 171.62,
+    "startFrame": 4107,
+    "endFrame": 4115,
+    "probability": 0.994
+  },
+  {
+    "word": "vez",
+    "start": 171.62,
+    "end": 171.9,
+    "startFrame": 4115,
+    "endFrame": 4121,
+    "probability": 0.999
+  },
+  {
+    "word": "más",
+    "start": 171.9,
+    "end": 172.14,
+    "startFrame": 4121,
+    "endFrame": 4127,
+    "probability": 0.996
+  },
+  {
+    "word": "intensas",
+    "start": 172.14,
+    "end": 172.84,
+    "startFrame": 4127,
+    "endFrame": 4144,
+    "probability": 0.997
+  },
+  {
+    "word": "y",
+    "start": 172.84,
+    "end": 172.98,
+    "startFrame": 4144,
+    "endFrame": 4147,
+    "probability": 0.996
+  },
+  {
+    "word": "extremas.",
+    "start": 172.98,
+    "end": 173.5,
+    "startFrame": 4147,
+    "endFrame": 4160,
+    "probability": 0.988
+  },
+  {
+    "word": "Compartí",
+    "start": 173.62,
+    "end": 174.68,
+    "startFrame": 4163,
+    "endFrame": 4188,
+    "probability": 0.766
+  },
+  {
+    "word": "este",
+    "start": 174.68,
+    "end": 174.86,
+    "startFrame": 4188,
+    "endFrame": 4192,
+    "probability": 0.984
+  },
+  {
+    "word": "vídeo",
+    "start": 174.86,
+    "end": 175.16,
+    "startFrame": 4192,
+    "endFrame": 4200,
+    "probability": 0.479
+  },
+  {
+    "word": "para",
+    "start": 175.16,
+    "end": 175.6,
+    "startFrame": 4200,
+    "endFrame": 4210,
+    "probability": 0.996
+  },
+  {
+    "word": "ganarle",
+    "start": 175.6,
+    "end": 176.1,
+    "startFrame": 4210,
+    "endFrame": 4222,
+    "probability": 0.977
+  },
+  {
+    "word": "a",
+    "start": 176.1,
+    "end": 176.32,
+    "startFrame": 4222,
+    "endFrame": 4227,
+    "probability": 0.974
+  },
+  {
+    "word": "la",
+    "start": 176.32,
+    "end": 176.44,
+    "startFrame": 4227,
+    "endFrame": 4230,
+    "probability": 0.964
+  },
+  {
+    "word": "desinformación",
+    "start": 176.44,
+    "end": 177.34,
+    "startFrame": 4230,
+    "endFrame": 4252,
+    "probability": 0.984
+  },
+  {
+    "word": "y",
+    "start": 177.34,
+    "end": 177.72,
+    "startFrame": 4252,
+    "endFrame": 4261,
+    "probability": 0.993
+  },
+  {
+    "word": "al",
+    "start": 177.72,
+    "end": 177.86,
+    "startFrame": 4261,
+    "endFrame": 4264,
+    "probability": 0.974
+  },
+  {
+    "word": "agua.",
+    "start": 177.86,
+    "end": 178.1,
+    "startFrame": 4264,
+    "endFrame": 4270,
+    "probability": 0.999
+  }
+]

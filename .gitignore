@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Remotion Cache & Output
+out/
+.remotion/
+.cache/
+
+# Raw Footage & Heavy Studio Crudos at Root (Multi-GB)
+/CRUDOS/
+/PR/
+/RECURSOS/
+/RENDER/
+
+# OS & Environment files
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
