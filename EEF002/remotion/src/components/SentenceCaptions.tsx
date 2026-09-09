@@ -33,12 +33,13 @@ export const SentenceCaptions: React.FC<SentenceCaptionsProps> = ({ captions }) 
         left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 50,
-        backgroundColor: 'rgba(7, 32, 44, 0.82)',
+        backgroundColor: 'rgba(7, 32, 44, 0.55)',
         backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
         padding: '12px 30px',
         borderRadius: '16px',
-        border: '1.5px solid rgba(255, 255, 255, 0.22)',
-        boxShadow: '0 12px 32px rgba(0, 0, 0, 0.45)',
+        border: '1.2px solid rgba(255, 255, 255, 0.18)',
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15)',
         maxWidth: '1280px',
         display: 'flex',
         justifyContent: 'center',
@@ -60,6 +61,7 @@ export const SentenceCaptions: React.FC<SentenceCaptionsProps> = ({ captions }) 
           fontFamily: "'Museo Sans', 'Museo', sans-serif",
           textWrap: 'balance',
           whiteSpace: 'normal',
+          textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)',
         }}
       >
         {activeCaption.formattedText || activeCaption.text}

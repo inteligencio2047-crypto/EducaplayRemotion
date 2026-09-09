@@ -18,10 +18,10 @@ export const THEME = {
   rainbowRail: ['#D43453', '#F0BA46', '#60B6D3', '#5DAA46'] as const,
   rainbowGradient: 'linear-gradient(to right, #D43453 0%, #D43453 25%, #F0BA46 25%, #F0BA46 50%, #60B6D3 50%, #60B6D3 75%, #5DAA46 75%, #5DAA46 100%)',
 
-  // Banda de subtítulos con scrim calibrado
+  // Banda de subtítulos con scrim esmerilado calibrado (frosted glass)
   captions: {
-    scrim: 'rgba(7, 32, 44, 0.82)',
-    border: '1.5px solid rgba(255, 255, 255, 0.22)',
+    scrim: 'rgba(7, 32, 44, 0.55)',
+    border: '1.2px solid rgba(255, 255, 255, 0.18)',
     blur: '12px',
     fontSize: '34px',
   },

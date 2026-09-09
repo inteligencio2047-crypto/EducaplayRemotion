@@ -85,7 +85,14 @@ Por cada episodio a producir, el equipo debe generar en la carpeta del capítulo
 - **NUNCA texto blanco suelto sobre el fondo del plató**: Los platós (cian `#1195C4`, lila `#EAA1F0`, verde menta, etc.) son claros y dan un ratio menor a 3.5:1 (rechazado por corrección pedagógica).
 - **Todo texto va sobre `<Surface>` o tarjetas opacas**: Fondo blanco con tinta oscura (`#07202C` / `#0C2B24`, ratio > 15:1).
 - **Énfasis triple**: Resaltado amarillo (`#FFF6C4`) + tinta oscura + subrayado o filete de color.
-- **Subtítulos con Scrim**: Fondo negro semitransparente con opacidad mínima de $\alpha = 0.55$ (`rgba(7, 32, 44, 0.55)`), `backdropFilter: blur(10px)` y borde sutil `rgba(255, 255, 255, 0.16)` para garantizar ratio $\ge 4.5:1$ sobre fondos claros o ropa del docente.
+- **Transparencia Esmerilada Obligatoria en Pastillas de Subtítulos (Frosted Glass / Scrim)**:
+  - Todo subtítulo DEBE montarse en una pastilla de vidrio esmerilado translúcido según `ARQUITECTURA_MARCA_EDUCAPLAY.md`:
+    * Fondo oscuro calibrado al 55% de opacidad: `backgroundColor: 'rgba(7, 32, 44, 0.55)'` (nunca opaco al 80%+ ni sólido plano).
+    * Difuminado de fondo (frosted glass): `backdropFilter: 'blur(12px)'` y `-webkit-backdrop-filter: 'blur(12px)'`.
+    * Borde cristalino sutil: `border: '1.2px solid rgba(255, 255, 255, 0.18)'`.
+    * Sombra y resplandor interno: `boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15)'`.
+    * Bordes redondeados: `borderRadius: '16px'` a `'18px'`.
+    * Tipografía: `Museo Sans 700`, 34 px, color blanco puro `#FFFFFF`, interlineado 1.3, con sutil sombra `textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)'`.
 - **Regla Inflexible de Máximo 2 Líneas en Subtítulos**: Ningún bloque de subtitulado puede superar las **dos líneas** en pantalla bajo ninguna circunstancia. Si un diálogo o texto excede este límite (típicamente > 80-90 caracteres o más de una proposición gramatical), el texto **DEBE dividirse en oraciones completas o cláusulas sintácticas de fácil comprensión**, sin cortar conceptos a la mitad ni quebrar sintagmas, sincronizando cada parte resultante de forma exacta con la palabra inicial y final pronunciada por el profesor (extraída de `transcript_words.json`). Cada bloque resultante debe tener como máximo 1 o 2 líneas equilibradas (`textWrap: 'balance'`).
 - **Evasión Obligatoria de la Placa del Docente (Elevación Automática F215 a F445)**: Durante los frames en que la placa lower-third con el nombre del profesor está en pantalla (declarada en `MARKS.lowerThirdIn` y `MARKS.lowerThirdOut`, comúnmente entre F215 y F445), la caja de subtítulos **DEBE elevarse automáticamente** (`bottom: 230px`, con `transition: 'bottom 0.25s ease'`) para despejar totalmente la franja inferior izquierda y evitar cualquier colisión o solapamiento con la caja identificatoria del docente. Una vez finalizada la placa del docente, el subtítulo desciende suavemente a su posición base estándar (`bottom: 48px`).
 - **Pisos de legibilidad**: Ancho mínimo de tarjeta **380 px**, cuerpo de texto mínimo **26 px**, duración mínima de bloque **60 frames** (2.4 s), y **75 frames** de panel quieto antes del primer resaltado.
@@ -125,7 +132,7 @@ El proyecto utiliza exclusivamente las fuentes corporativas embebidas en `src/st
 1. **Kickers / Etiquetas / Tags de Categoría Superior**:
    - Fuente: `Museo Sans` 700 u 800
    - Formato: `textTransform: 'uppercase'` con `letterSpacing: '0.10em'` a `'0.14em'`
-   - Color: `accentDeep` (`#06590D` en Ambiente)
+   - Color: `accentDeep` (`#06590D` en Ambiente, `#006876` en Economía)
    - Tamaño: 16–18 px
    - Ejemplos: `DECISIONES CLAVE`, `PASO`, `PROTOCOLO DE SEGURIDAD`, `CONCEPTO CLAVE`, `REGISTRO DOCUMENTAL · CORRIENTES`.
 
@@ -134,7 +141,7 @@ El proyecto utiliza exclusivamente las fuentes corporativas embebidas en `src/st
    - Color: Tinta oscura profunda (`THEME.ink`: `#0C2B24` o `#07202C`)
    - Interlineado: `lineHeight: 1.20` a `1.24`
    - Tamaño: 34–38 px (versión compacta 30–32 px)
-   - **Filete de Acento Inferior**: En tarjetas de titulares de decisiones, preguntas o mitos, se coloca un filete horizontal verde de acento (`width: 84px`, `height: 4px`, `borderRadius: 2px`, `backgroundColor: THEME.accent`) inmediatamente debajo del título y antes de la bajada explicativa.
+   - **Filete de Acento Inferior**: En tarjetas de titulares de decisiones, preguntas o mitos, se coloca un filete horizontal de acento (`width: 84px`, `height: 4px`, `borderRadius: 2px`, `backgroundColor: THEME.accent`) inmediatamente debajo del título y antes de la bajada explicativa.
 
 3. **Cuerpo, Bajadas y Explicaciones**:
    - Fuente: `Museo Sans` (pesos 400, 600 o 700)
@@ -149,21 +156,41 @@ El proyecto utiliza exclusivamente las fuentes corporativas embebidas en `src/st
 5. **Pastillas de Alerta Flotantes (`AlertPill`)**:
    - Cápsula blanca flotante (`borderRadius: '20px'`), sombra profunda, borde fino `rgba(7, 32, 44, 0.09)`, ícono badge a la izquierda (`🚨`, `⚠️`, `❓`) y texto en `Museo 900` (30 px), ideales para preguntas retóricas, avisos de atención o llamadas de foco pedagógico (ej. "¿Qué hacés?", "¿A dónde vas?").
 
-6. **Tarjetas de Recursos Didácticos (`<MediaCard />`)**:
-   - **Ceja Cromática Cuatricolor Obligatoria**: Riel de 4 colores en el borde superior (`<RainbowEyebrow />`), altura fija de 6 px a 8 px.
-   - **Well de Media Calibrado**: Contenedor superior para imágenes, GIFs animados o videos. Fondo `#07202C` para video/fotos reales o `#F4FBFD` para elementos gráficos transparentes.
-   - **Badge de Fuente / Atribución**: Esquina superior derecha con fondo oscuro translúcido (`rgba(7, 32, 44, 0.90)`), borde sutil de acento y texto en `Museo Sans 700` (15 px) con espaciado amplio.
-   - **Pie Tipográfico Institucional**: Superficie blanca `#FFFFFF`, Título en `Museo 900` (32–36 px, color tinta `#07202C` / `#0C2B24`) y bajada / crédito en `Museo Sans 600` (24–26 px, color `THEME.accentDeep`).
-   - **Dimensiones según Carga de Atención**:
-     * `small_left`: 560 × 300 px (docente en centro).
-     * `medium_right`: 680 × 380 px (docente a la izquierda).
-     * `large_center`: 1140 × 480 px (pantalla completa / docente en off).
+### 2.3. Regla de Posicionamiento de Titulares Cortos Asociados (Layout Dual Izquierda/Derecha)
+- Cuando en una fila o bloque coexisten un titular conceptual/corto y uno o más recursos gráficos (fotos, GIFs, videos en la banda derecha) con el docente en el centro del plató:
+  * **Ubicación a la Izquierda**: El titular DEBE ubicarse a la **izquierda del profesor** (`anchorX: 'left'`, `category: 'small_left'`).
+  * **Distancia al Margen Izquierdo**: Exactamente a **200 píxeles** de distancia del borde izquierdo del cuadro (`left: '200px'`).
+  * **Alineación Vertical**: A la **misma altura vertical** que el recurso de la derecha (`top: '260px'`).
+  * **Ancho Contenido**: Ancho calibrado entre 480 px y 520 px (`maxWidth: '520px'`), finalizando en $X \approx 700$–$720$ px antes de la silueta del profesor ($X \approx 750$ px).
+  * **Beneficio**: Garantiza un equilibrio compositivo televisivo perfecto, distribuyendo el foco a ambos lados del docente sin sobrecargar la banda derecha ni tapar al presentador.
 
-7. **Estilo de Tarjetas Generales (Norma Paraguas ARQUITECTURA_MARCA_EDUCAPLAY.md)**:
-   - Fondo: Blanco puro `#FFFFFF` (opacidad $\ge 0.94$).
-   - Vértices: `borderRadius: '24px'` con `overflow: 'hidden'`.
-   - Borde: `1.5px solid rgba(7, 32, 44, 0.09)`.
-   - Sombra: `0 20px 48px rgba(7, 32, 44, 0.16), 0 4px 12px rgba(7, 32, 44, 0.05)`.
+### 2.4. Recursos de Video en Filas de Carga Alta / Docente Fuera de Cuadro (Pantalla Completa)
+- Cuando el profesor sale de cuadro (voz en off o segmentos de carga alta, ej. `framing === 'none'`, `category: 'large_center'`):
+  * **Centrado Perfecto Vertical y Horizontal**: El recurso de video DEBE estar estrictamente centrado en el cuadro:
+    `top: '50%'`, `left: '50%'`, `transform: 'translate(-50%, -50%)'`.
+  * **Dimensiones Cinematográficas Calibradas**:
+    - Ancho: **1480 px** (en lugar de los antiguos 1140 px).
+    - Altura de media: **832 px** (formato nativo 16:9) o **720 px** si incluye footer tipográfico.
+  * **Respeto Absoluto a Márgenes de Seguridad (Title Safe / Action Safe)**:
+    - Deja 220 px de margen a izquierda y derecha, y 124 px superior e inferior.
+    - No colisiona con la mosca institucional superior derecha ni con la pastilla de subtítulos esmerilada inferior.
+  * **Acabado Institucional**: Ceja cromática cuatricolor superior (`RainbowEyebrow`), bordes redondeados (`borderRadius: '24px'`), badge de fuente/atribución en la esquina superior derecha y sombra profunda oficial.
+
+### 2.5. Tarjetas de Recursos Didácticos Estándar (`<MediaCard />`)
+- **Ceja Cromática Cuatricolor Obligatoria**: Riel de 4 colores en el borde superior (`<RainbowEyebrow />`), altura fija de 6 px a 8 px.
+- **Well de Media Calibrado**: Contenedor superior para imágenes, GIFs animados o videos. Fondo `#07202C` para video/fotos reales o `#F4FBFD` para elementos gráficos transparentes.
+- **Badge de Fuente / Atribución**: Esquina superior derecha con fondo oscuro translúcido (`rgba(7, 32, 44, 0.90)`), borde sutil de acento y texto en `Museo Sans 700` (15 px) con espaciado amplio.
+- **Pie Tipográfico Institucional**: Superficie blanca `#FFFFFF`, Título en `Museo 900` (32–36 px, color tinta `#07202C` / `#0C2B24`) y bajada / crédito en `Museo Sans 600` (24–26 px, color `THEME.accentDeep`).
+- **Dimensiones según Carga de Atención**:
+  * `small_left`: 480 × 280 px (a 200 px del margen izquierdo).
+  * `medium_right`: 680 × 380 px (docente a la izquierda o centro).
+  * `large_center`: 1480 × 832 px (pantalla completa / docente fuera de cuadro, centrado vertical y horizontal).
+
+### 2.6. Estilo de Tarjetas Generales (Norma Paraguas ARQUITECTURA_MARCA_EDUCAPLAY.md)
+- Fondo: Blanco puro `#FFFFFF` (opacidad $\ge 0.94$).
+- Vértices: `borderRadius: '24px'` con `overflow: 'hidden'`.
+- Borde: `1.5px solid rgba(7, 32, 44, 0.09)`.
+- Sombra: `0 20px 48px rgba(7, 32, 44, 0.16), 0 4px 12px rgba(7, 32, 44, 0.05)`.
 
 ---
 

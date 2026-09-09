@@ -29,8 +29,8 @@ export const MediaCard: React.FC<MediaCardProps> = ({
   isCompact = false,
   isLarge = false,
 }) => {
-  const widthPx = isLarge ? 1140 : isCompact ? 560 : 680;
-  const heightPx = isLarge ? 480 : isCompact ? 300 : 380;
+  const widthPx = isLarge ? 1480 : isCompact ? 480 : 680;
+  const heightPx = isLarge ? ((title || caption) ? 720 : 832) : isCompact ? 280 : 380;
 
   const isTransparentGraphic = src.endsWith('.png') || src.endsWith('.gif');
   const isRendering = getRemotionEnvironment().isRendering;

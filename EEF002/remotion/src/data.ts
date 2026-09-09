@@ -75,8 +75,8 @@ export const BLOCKS: MotionBlock[] = [
     title: 'Necesidad ≠ deseo',
     from: 520,
     to: 670,
-    anchorX: 'right',
-    category: 'medium_right',
+    anchorX: 'left',
+    category: 'small_left',
     role: 'didactico'
   },
   {
@@ -98,8 +98,8 @@ export const BLOCKS: MotionBlock[] = [
     title: 'Necesidades',
     from: 725,
     to: 894,
-    anchorX: 'right',
-    category: 'medium_right',
+    anchorX: 'left',
+    category: 'small_left',
     role: 'didactico'
   },
   {
@@ -121,8 +121,8 @@ export const BLOCKS: MotionBlock[] = [
     title: 'Necesidades primarias',
     from: 942,
     to: 1257,
-    anchorX: 'right',
-    category: 'medium_right',
+    anchorX: 'left',
+    category: 'small_left',
     role: 'didactico'
   },
   {
@@ -166,8 +166,8 @@ export const BLOCKS: MotionBlock[] = [
     title: 'Necesidades secundarias',
     from: 1313,
     to: 1534,
-    anchorX: 'right',
-    category: 'medium_right',
+    anchorX: 'left',
+    category: 'small_left',
     role: 'didactico'
   },
   {
@@ -224,8 +224,8 @@ export const BLOCKS: MotionBlock[] = [
     title: 'Deseo',
     from: 1996,
     to: 2100,
-    anchorX: 'right',
-    category: 'medium_right',
+    anchorX: 'left',
+    category: 'small_left',
     role: 'didactico'
   },
   {

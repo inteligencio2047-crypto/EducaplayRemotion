@@ -103,10 +103,10 @@ export const THEME = {
   rainbowRail: ['#D43453', '#F0BA46', '#60B6D3', '#5DAA46'] as const,
   rainbowGradient: 'linear-gradient(to right, #D43453 0%, #D43453 25%, #F0BA46 25%, #F0BA46 50%, #60B6D3 50%, #60B6D3 75%, #5DAA46 75%, #5DAA46 100%)',
 
-  // Banda de subtítulos con scrim calibrado
+  // Banda de subtítulos con scrim esmerilado calibrado (frosted glass)
   captions: {
-    scrim: 'rgba(7, 32, 44, 0.82)',
-    border: '1.5px solid rgba(255, 255, 255, 0.22)',
+    scrim: 'rgba(7, 32, 44, 0.55)',
+    border: '1.2px solid rgba(255, 255, 255, 0.18)',
     blur: '12px',
     fontSize: '34px',
   },
@@ -296,8 +296,8 @@ export const MediaCard: React.FC<MediaCardProps> = ({
   isCompact = false,
   isLarge = false,
 }) => {
-  const widthPx = isLarge ? 1140 : isCompact ? 560 : 680;
-  const heightPx = isLarge ? 480 : isCompact ? 300 : 380;
+  const widthPx = isLarge ? 1480 : isCompact ? 480 : 680;
+  const heightPx = isLarge ? ((title || caption) ? 720 : 832) : isCompact ? 280 : 380;
   const isTransparentGraphic = src.endsWith('.png') || src.endsWith('.gif');
   const isRendering = getRemotionEnvironment().isRendering;
 
@@ -540,10 +540,11 @@ export const SentenceCaptions: React.FC<SentenceCaptionsProps> = ({ captions }) 
         zIndex: 50,
         backgroundColor: THEME.captions.scrim,
         backdropFilter: `blur(${THEME.captions.blur})`,
+        WebkitBackdropFilter: `blur(${THEME.captions.blur})`,
         padding: '12px 30px',
         borderRadius: '16px',
         border: THEME.captions.border,
-        boxShadow: '0 12px 32px rgba(0, 0, 0, 0.45)',
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15)',
         maxWidth: '1280px',
         display: 'flex',
         justifyContent: 'center',
@@ -565,6 +566,7 @@ export const SentenceCaptions: React.FC<SentenceCaptionsProps> = ({ captions }) 
           fontFamily: THEME.fonts.body,
           textWrap: 'balance',
           whiteSpace: 'normal',
+          textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)',
         }}
       >
         {activeCaption.formattedText || activeCaption.text}

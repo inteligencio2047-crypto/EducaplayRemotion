@@ -55,9 +55,9 @@ export const SlotContainer: React.FC<SlotContainerProps> = ({
   const opacity = fadeIn * fadeOut;
 
   // Determine effective anchor and sizing based on 3-category standard:
-  // 1. small_left: Teacher centered -> Resource on LEFT (compact ~560px)
-  // 2. medium_right: Teacher centered/left -> Resource on RIGHT (medium ~680px)
-  // 3. large_center: Teacher OFF / Fullscreen -> Resource in CENTER (large ~1180px or Full)
+  // 1. small_left: Teacher centered -> Resource/Titular on LEFT (compact ~500px, left: 200px, top: 260px)
+  // 2. medium_right: Teacher centered/left -> Resource on RIGHT (medium ~680px, right: 80px, top: 260px)
+  // 3. large_center: Teacher OFF / Fullscreen -> Video/Resource CENTERED Vertically & Horizontally (large ~1480px)
   let effectiveAnchor: AnchorX = anchorX;
   if (category === 'small_left') effectiveAnchor = 'left';
   if (category === 'medium_right') effectiveAnchor = 'right';
@@ -65,37 +65,32 @@ export const SlotContainer: React.FC<SlotContainerProps> = ({
 
   let containerMaxWidth = maxWidth;
   if (!containerMaxWidth) {
-    if (effectiveAnchor === 'left') containerMaxWidth = 580;
+    if (effectiveAnchor === 'left') containerMaxWidth = 520;
     else if (effectiveAnchor === 'right') containerMaxWidth = 680;
-    else containerMaxWidth = 1180;
+    else containerMaxWidth = 1480;
   }
 
-  const containerMaxHeight = maxHeight || (effectiveAnchor === 'center' ? 700 : 640);
+  const containerMaxHeight = maxHeight || (effectiveAnchor === 'center' ? 880 : 640);
 
-  // Top position calculation:
-  // For 'right' anchor: push down to 260px to safely clear the top-right mosca logo
-  // For 'left' anchor: align at 240px
-  // For 'center': center vertically in upper-mid space
-  let topPos = '240px';
-  if (effectiveAnchor === 'center') {
-    topPos = '130px';
-  } else if (effectiveAnchor === 'right') {
-    topPos = '260px';
-  } else if (effectiveAnchor === 'left') {
-    topPos = '240px';
-  }
-
+  // Posicionamiento calibrado:
+  // - Para 'right': top: 260px para salvar la mosca institucional
+  // - Para 'left': top: 260px (misma altura que la derecha) y left: 200px (a 200px del margen izquierdo)
+  // - Para 'center' (Carga alta / docente fuera de cuadro): centrado perfecto vertical y horizontal
+  let topPos = '260px';
   let leftPos = 'auto';
   let rightPos = 'auto';
-  let transformX = '0%';
+  let transformStr = `scale(${scale})`;
 
-  if (effectiveAnchor === 'right') {
+  if (effectiveAnchor === 'center') {
+    topPos = '50%';
+    leftPos = '50%';
+    transformStr = `translate(-50%, -50%) scale(${scale})`;
+  } else if (effectiveAnchor === 'right') {
+    topPos = '260px';
     rightPos = '80px';
   } else if (effectiveAnchor === 'left') {
-    leftPos = '80px';
-  } else {
-    leftPos = '50%';
-    transformX = '-50%';
+    topPos = '260px';
+    leftPos = '200px';
   }
 
   return (
@@ -107,7 +102,7 @@ export const SlotContainer: React.FC<SlotContainerProps> = ({
         right: rightPos,
         width: `${containerMaxWidth}px`,
         maxHeight: `${containerMaxHeight}px`,
-        transform: `translateX(${transformX}) scale(${scale})`,
+        transform: transformStr,
         opacity,
         zIndex: 20,
         display: 'flex',
