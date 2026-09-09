@@ -78,24 +78,505 @@ Config.setConcurrency(4);
     with open(os.path.join(REMOTION_DIR, "remotion.config.ts"), "w", encoding="utf-8") as f:
         f.write(remotion_config)
 
-    # 3. Copiar componentes estándar desde backup EEF001
-    src_b = os.path.join(BACKUP_EEF001_DIR, "src")
-    components_b = os.path.join(src_b, "components")
-    styles_b = os.path.join(src_b, "styles")
+    # 3. Generar Sistema de Diseño Oficial EducaPlay (brand/ y components/)
+    brand_dir = os.path.join(src_dir, "brand")
+    os.makedirs(brand_dir, exist_ok=True)
+    
+    # brand/eefTheme.ts
+    theme_ts = """/**
+ * Tema oficial para Educación Económica y Financiera (EducaPlay Secundaria)
+ * Basado estrictamente en ARQUITECTURA_MARCA_EDUCAPLAY.md y estándares WCAG AAA.
+ */
+export const THEME = {
+  ink: '#07202C',         // Tinta oscura profunda (>15:1 sobre blanco)
+  accent: '#00ADC3',      // Acento cian oficial de la materia
+  accentDeep: '#006876',  // Cian profundo para kickers y tags (WCAG AAA > 7:1)
+  emphasisBg: '#FFF6C4',  // Fondo amarillo pastel para ÉNFASIS TRIPLE oficial
+  surface: '#FFFFFF',     // Superficie blanca luminosa (alfa >= 0.94)
 
-    if os.path.exists(components_b):
-        for item in os.listdir(components_b):
-            s = os.path.join(components_b, item)
-            d = os.path.join(components_dir, item)
-            if os.path.isfile(s):
-                shutil.copy2(s, d)
+  // Bordes y sombras institucionales unificadas
+  border: '1.5px solid rgba(7, 32, 44, 0.09)',
+  shadow: '0 20px 48px rgba(7, 32, 44, 0.16), 0 4px 12px rgba(7, 32, 44, 0.05)',
+  eyebrowHeight: '6px',
 
+  // Ceja Cromática Oficial de Marca EducaPlay (Riel Arcoíris de 4 colores)
+  rainbowRail: ['#D43453', '#F0BA46', '#60B6D3', '#5DAA46'] as const,
+  rainbowGradient: 'linear-gradient(to right, #D43453 0%, #D43453 25%, #F0BA46 25%, #F0BA46 50%, #60B6D3 50%, #60B6D3 75%, #5DAA46 75%, #5DAA46 100%)',
+
+  // Banda de subtítulos con scrim calibrado
+  captions: {
+    scrim: 'rgba(7, 32, 44, 0.82)',
+    border: '1.5px solid rgba(255, 255, 255, 0.22)',
+    blur: '12px',
+    fontSize: '34px',
+  },
+
+  // Tipografías oficiales
+  fonts: {
+    title: "'Museo', system-ui, -apple-system, sans-serif",
+    body: "'Museo Sans', system-ui, -apple-system, sans-serif",
+  },
+} as const;
+
+export default THEME;
+"""
+    with open(os.path.join(brand_dir, "eefTheme.ts"), "w", encoding="utf-8") as f:
+        f.write(theme_ts)
+
+    # Copiar fuentes si existen en backup
+    styles_b = os.path.join(BACKUP_EEF001_DIR, "src", "styles")
     if os.path.exists(styles_b):
         for item in os.listdir(styles_b):
             s = os.path.join(styles_b, item)
             d = os.path.join(styles_dir, item)
             if os.path.isfile(s):
                 shutil.copy2(s, d)
+
+    # RainbowEyebrow.tsx
+    eyebrow_tsx = """import React from 'react';
+import { THEME } from '../brand/eefTheme';
+
+export interface RainbowEyebrowProps {
+  height?: string | number;
+}
+
+export const RainbowEyebrow: React.FC<RainbowEyebrowProps> = ({
+  height = THEME.eyebrowHeight,
+}) => {
+  return (
+    <div
+      style={{
+        width: '100%',
+        height,
+        display: 'flex',
+        flexDirection: 'row',
+        flexShrink: 0,
+      }}
+    >
+      {THEME.rainbowRail.map((color, idx) => (
+        <div
+          key={idx}
+          style={{
+            flex: 1,
+            height: '100%',
+            backgroundColor: color,
+          }}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default RainbowEyebrow;
+"""
+    with open(os.path.join(components_dir, "RainbowEyebrow.tsx"), "w", encoding="utf-8") as f:
+        f.write(eyebrow_tsx)
+
+    # TitularCard.tsx
+    titular_tsx = """import React from 'react';
+import { THEME } from '../brand/eefTheme';
+import { RainbowEyebrow } from './RainbowEyebrow';
+
+export interface TitularCardProps {
+  title: string;
+  kicker?: string;
+  subtitle?: string;
+  showAccentRule?: boolean;
+  isCompact?: boolean;
+}
+
+export const TitularCard: React.FC<TitularCardProps> = ({
+  title,
+  kicker,
+  subtitle,
+  showAccentRule = true,
+  isCompact = false,
+}) => {
+  return (
+    <div
+      style={{
+        backgroundColor: THEME.surface,
+        borderRadius: '24px',
+        overflow: 'hidden',
+        boxShadow: THEME.shadow,
+        border: THEME.border,
+        maxWidth: isCompact ? '560px' : '680px',
+        display: 'flex',
+        flexDirection: 'column',
+        fontFamily: THEME.fonts.title,
+      }}
+    >
+      <RainbowEyebrow />
+      <div style={{ padding: isCompact ? '20px 26px' : '24px 32px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        {kicker && (
+          <span
+            style={{
+              fontSize: '18px',
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
+              fontWeight: 800,
+              color: THEME.accentDeep,
+              fontFamily: THEME.fonts.body,
+            }}
+          >
+            {kicker}
+          </span>
+        )}
+        <div
+          style={{
+            fontSize: isCompact ? '32px' : '36px',
+            fontWeight: 900,
+            color: THEME.ink,
+            lineHeight: 1.22,
+            fontFamily: THEME.fonts.title,
+            letterSpacing: '-0.01em',
+          }}
+        >
+          {title}
+        </div>
+        {showAccentRule && (
+          <div
+            style={{
+              width: '84px',
+              height: '4px',
+              backgroundColor: THEME.accent,
+              borderRadius: '2px',
+              marginTop: '4px',
+              marginBottom: subtitle ? '6px' : '0px',
+            }}
+          />
+        )}
+        {subtitle && (
+          <div
+            style={{
+              fontSize: '26px',
+              fontWeight: 600,
+              color: THEME.accentDeep,
+              fontFamily: THEME.fonts.body,
+              lineHeight: 1.35,
+            }}
+          >
+            {subtitle}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default TitularCard;
+"""
+    with open(os.path.join(components_dir, "TitularCard.tsx"), "w", encoding="utf-8") as f:
+        f.write(titular_tsx)
+
+    # MediaCard.tsx
+    media_tsx = """import React from 'react';
+import { getRemotionEnvironment, Html5Video, Img, OffthreadVideo, staticFile } from 'remotion';
+import { THEME } from '../brand/eefTheme';
+import { RainbowEyebrow } from './RainbowEyebrow';
+
+export interface MediaCardProps {
+  kind: 'image' | 'video';
+  src: string;
+  title?: string;
+  caption?: string;
+  source?: string;
+  clipFrom?: number;
+  isCompact?: boolean;
+  isLarge?: boolean;
+}
+
+export const MediaCard: React.FC<MediaCardProps> = ({
+  kind,
+  src,
+  title,
+  caption,
+  source,
+  clipFrom = 0,
+  isCompact = false,
+  isLarge = false,
+}) => {
+  const widthPx = isLarge ? 1140 : isCompact ? 560 : 680;
+  const heightPx = isLarge ? 480 : isCompact ? 300 : 380;
+  const isTransparentGraphic = src.endsWith('.png') || src.endsWith('.gif');
+  const isRendering = getRemotionEnvironment().isRendering;
+
+  return (
+    <div
+      style={{
+        backgroundColor: THEME.surface,
+        borderRadius: '24px',
+        overflow: 'hidden',
+        boxShadow: THEME.shadow,
+        border: THEME.border,
+        width: `${widthPx}px`,
+        display: 'flex',
+        flexDirection: 'column',
+        fontFamily: THEME.fonts.title,
+        position: 'relative',
+      }}
+    >
+      <RainbowEyebrow />
+      {source && (
+        <div
+          style={{
+            position: 'absolute',
+            top: '16px',
+            right: '16px',
+            backgroundColor: 'rgba(7, 32, 44, 0.90)',
+            color: '#FFFFFF',
+            padding: '6px 14px',
+            borderRadius: '10px',
+            fontSize: '15px',
+            fontWeight: 700,
+            zIndex: 10,
+            backdropFilter: 'blur(8px)',
+            border: '1px solid rgba(0, 173, 195, 0.4)',
+            fontFamily: THEME.fonts.body,
+            letterSpacing: '0.04em',
+          }}
+        >
+          Fuente: {source}
+        </div>
+      )}
+      <div
+        style={{
+          width: '100%',
+          height: `${heightPx}px`,
+          position: 'relative',
+          backgroundColor: isTransparentGraphic ? '#F4FBFD' : '#07202C',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderBottom: (title || caption) ? '1.5px solid rgba(7, 32, 44, 0.08)' : 'none',
+        }}
+      >
+        {(() => {
+          let safeSrc = src;
+          if (src && !src.startsWith('http://') && !src.startsWith('https://') && !src.startsWith('/static')) {
+            try {
+              safeSrc = staticFile(src);
+            } catch {
+              safeSrc = src;
+            }
+          }
+          if (kind === 'image') {
+            return (
+              <Img
+                src={safeSrc}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: isTransparentGraphic ? 'contain' : 'cover',
+                  padding: isTransparentGraphic ? '20px' : '0px',
+                }}
+              />
+            );
+          } else if (isRendering) {
+            return (
+              <OffthreadVideo
+                src={safeSrc}
+                startFrom={clipFrom * 25}
+                volume={0}
+                muted
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            );
+          } else {
+            return (
+              <Html5Video
+                src={safeSrc}
+                startFrom={clipFrom * 25}
+                volume={0}
+                muted
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            );
+          }
+        })()}
+      </div>
+      {(title || caption) && (
+        <div
+          style={{
+            padding: isCompact ? '18px 24px' : '22px 28px',
+            backgroundColor: THEME.surface,
+            color: THEME.ink,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '6px',
+          }}
+        >
+          {title && (
+            <div
+              style={{
+                fontSize: isCompact ? '32px' : '36px',
+                fontWeight: 900,
+                color: THEME.ink,
+                lineHeight: 1.22,
+                fontFamily: THEME.fonts.title,
+                letterSpacing: '-0.01em',
+              }}
+            >
+              {title}
+            </div>
+          )}
+          {caption && (
+            <div
+              style={{
+                fontSize: isCompact ? '24px' : '26px',
+                fontWeight: 600,
+                color: THEME.accentDeep,
+                lineHeight: 1.35,
+                fontFamily: THEME.fonts.body,
+              }}
+            >
+              {caption}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default MediaCard;
+"""
+    with open(os.path.join(components_dir, "MediaCard.tsx"), "w", encoding="utf-8") as f:
+        f.write(media_tsx)
+
+    # AlertPill.tsx
+    alert_tsx = """import React from 'react';
+import { THEME } from '../brand/eefTheme';
+
+export interface AlertPillProps {
+  text: string;
+  icon?: string;
+  iconType?: 'alert' | 'siren' | 'question' | 'custom';
+}
+
+export const AlertPill: React.FC<AlertPillProps> = ({
+  text,
+  icon,
+  iconType = 'alert',
+}) => {
+  const renderIcon = () => {
+    if (icon) return <span style={{ fontSize: '32px', lineHeight: 1 }}>{icon}</span>;
+    switch (iconType) {
+      case 'siren': return <span style={{ fontSize: '32px', lineHeight: 1 }}>🚨</span>;
+      case 'question': return <span style={{ fontSize: '32px', lineHeight: 1 }}>❓</span>;
+      case 'alert':
+      default: return <span style={{ fontSize: '32px', lineHeight: 1 }}>⚠️</span>;
+    }
+  };
+
+  return (
+    <div
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '16px',
+        backgroundColor: THEME.surface,
+        color: THEME.ink,
+        padding: '14px 28px',
+        borderRadius: '20px',
+        border: THEME.border,
+        boxShadow: THEME.shadow,
+        fontFamily: THEME.fonts.title,
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center' }}>{renderIcon()}</div>
+      <span
+        style={{
+          fontSize: '30px',
+          fontWeight: 900,
+          color: THEME.ink,
+          fontFamily: THEME.fonts.title,
+          letterSpacing: '-0.01em',
+        }}
+      >
+        {text}
+      </span>
+    </div>
+  );
+};
+
+export default AlertPill;
+"""
+    with open(os.path.join(components_dir, "AlertPill.tsx"), "w", encoding="utf-8") as f:
+        f.write(alert_tsx)
+
+    # SentenceCaptions.tsx
+    captions_comp_tsx = """import React from 'react';
+import { useCurrentFrame } from 'remotion';
+import { SentenceCaption } from '../captions';
+import { MARKS } from '../data';
+import { THEME } from '../brand/eefTheme';
+
+export interface SentenceCaptionsProps {
+  captions: SentenceCaption[];
+}
+
+export const SentenceCaptions: React.FC<SentenceCaptionsProps> = ({ captions }) => {
+  const frame = useCurrentFrame();
+  const activeCaption = captions.find(
+    (c) => frame >= c.startFrame && frame <= c.endFrame
+  );
+
+  if (!activeCaption) return null;
+
+  // Elevación obligatoria de subtítulos entre F215 y F445 para no colisionar con la placa del profesor
+  const lowerThirdIn = (MARKS as any).lowerThirdIn ?? 215;
+  const lowerThirdOut = (MARKS as any).lowerThirdOut ?? 445;
+  const isLowerThirdActive = frame >= lowerThirdIn && frame <= lowerThirdOut;
+  const bottomPos = isLowerThirdActive ? '230px' : '48px';
+
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        bottom: bottomPos,
+        left: '50%',
+        transform: 'translateX(-50%)',
+        zIndex: 50,
+        backgroundColor: THEME.captions.scrim,
+        backdropFilter: `blur(${THEME.captions.blur})`,
+        padding: '12px 30px',
+        borderRadius: '16px',
+        border: THEME.captions.border,
+        boxShadow: '0 12px 32px rgba(0, 0, 0, 0.45)',
+        maxWidth: '1280px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        pointerEvents: 'none',
+        fontFamily: THEME.fonts.body,
+        transition: 'bottom 0.25s ease',
+      }}
+    >
+      <span
+        style={{
+          fontSize: THEME.captions.fontSize,
+          fontWeight: 700,
+          color: '#FFFFFF',
+          letterSpacing: '-0.01em',
+          lineHeight: 1.3,
+          textAlign: 'center',
+          fontFamily: THEME.fonts.body,
+          textWrap: 'balance',
+          whiteSpace: 'normal',
+        }}
+      >
+        {activeCaption.formattedText || activeCaption.text}
+      </span>
+    </div>
+  );
+};
+
+export default SentenceCaptions;
+"""
+    with open(os.path.join(components_dir, "SentenceCaptions.tsx"), "w", encoding="utf-8") as f:
+        f.write(captions_comp_tsx)
 
     # 4. Vincular video master y recursos en public/
     master_src = os.path.join(BASE_DIR, "RENDER", "EEF002 - PRIMER CORTE.mp4")

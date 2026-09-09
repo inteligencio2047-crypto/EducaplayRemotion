@@ -147,9 +147,19 @@ El proyecto utiliza exclusivamente las fuentes corporativas embebidas en `src/st
    - **Cuerpo de Paso**: Ceja cuatricolor superior, íconos vectoriales delineados de servicios (agua, gas, electricidad), palabra clave en negrita (`Museo Sans 900`), texto explicativo en `Museo Sans 600` (piso 26 px), divisor horizontal sutil y nota al pie en 20–22 px (`Museo Sans 600`).
 
 5. **Pastillas de Alerta Flotantes (`AlertPill`)**:
-   - Cápsula blanca flotante (`borderRadius: '20px'`), sombra profunda, borde fino `rgba(7, 32, 44, 0.09)`, ícono badge a la izquierda (`🚨`, `⚠️`, `❓`) y texto en `Museo 900` (30 px).
+   - Cápsula blanca flotante (`borderRadius: '20px'`), sombra profunda, borde fino `rgba(7, 32, 44, 0.09)`, ícono badge a la izquierda (`🚨`, `⚠️`, `❓`) y texto en `Museo 900` (30 px), ideales para preguntas retóricas, avisos de atención o llamadas de foco pedagógico (ej. "¿Qué hacés?", "¿A dónde vas?").
 
-6. **Estilo de Tarjetas Generales**:
+6. **Tarjetas de Recursos Didácticos (`<MediaCard />`)**:
+   - **Ceja Cromática Cuatricolor Obligatoria**: Riel de 4 colores en el borde superior (`<RainbowEyebrow />`), altura fija de 6 px a 8 px.
+   - **Well de Media Calibrado**: Contenedor superior para imágenes, GIFs animados o videos. Fondo `#07202C` para video/fotos reales o `#F4FBFD` para elementos gráficos transparentes.
+   - **Badge de Fuente / Atribución**: Esquina superior derecha con fondo oscuro translúcido (`rgba(7, 32, 44, 0.90)`), borde sutil de acento y texto en `Museo Sans 700` (15 px) con espaciado amplio.
+   - **Pie Tipográfico Institucional**: Superficie blanca `#FFFFFF`, Título en `Museo 900` (32–36 px, color tinta `#07202C` / `#0C2B24`) y bajada / crédito en `Museo Sans 600` (24–26 px, color `THEME.accentDeep`).
+   - **Dimensiones según Carga de Atención**:
+     * `small_left`: 560 × 300 px (docente en centro).
+     * `medium_right`: 680 × 380 px (docente a la izquierda).
+     * `large_center`: 1140 × 480 px (pantalla completa / docente en off).
+
+7. **Estilo de Tarjetas Generales (Norma Paraguas ARQUITECTURA_MARCA_EDUCAPLAY.md)**:
    - Fondo: Blanco puro `#FFFFFF` (opacidad $\ge 0.94$).
    - Vértices: `borderRadius: '24px'` con `overflow: 'hidden'`.
    - Borde: `1.5px solid rgba(7, 32, 44, 0.09)`.

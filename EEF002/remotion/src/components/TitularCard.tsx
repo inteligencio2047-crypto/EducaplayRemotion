@@ -1,57 +1,102 @@
 import React from 'react';
+import { THEME } from '../brand/eefTheme';
+import { RainbowEyebrow } from './RainbowEyebrow';
 
 export interface TitularCardProps {
   title: string;
+  kicker?: string;
   subtitle?: string;
+  showAccentRule?: boolean;
   isCompact?: boolean;
 }
 
+/**
+ * Tarjeta de Titular Pedagógico Oficial EducaPlay
+ * Con Ceja Cromática Cuatricolor, Kicker en Museo Sans 800,
+ * Título en Museo 900, Filete de Acento horizontal y Subtítulo.
+ */
 export const TitularCard: React.FC<TitularCardProps> = ({
   title,
+  kicker,
   subtitle,
+  showAccentRule = true,
   isCompact = false,
 }) => {
   return (
     <div
       style={{
-        background: '#FFFFFF',
-        borderRadius: '20px',
-        padding: isCompact ? '18px 26px' : '22px 30px',
-        boxShadow: '0 16px 42px rgba(7, 32, 44, 0.18)',
-        border: '1.5px solid rgba(0, 173, 195, 0.28)',
-        borderTop: '6px solid #00ADC3', // Accent stripe
-        maxWidth: isCompact ? '560px' : '660px',
-        fontFamily: "'Museo', 'Museo Sans', system-ui, -apple-system, sans-serif",
+        backgroundColor: THEME.surface,
+        borderRadius: '24px',
+        overflow: 'hidden',
+        boxShadow: THEME.shadow,
+        border: THEME.border,
+        maxWidth: isCompact ? '560px' : '680px',
         display: 'flex',
         flexDirection: 'column',
-        gap: '6px',
+        fontFamily: THEME.fonts.title,
       }}
     >
-      <div
-        style={{
-          fontSize: '36px',
-          fontWeight: 900,
-          color: '#07202C',
-          lineHeight: 1.22,
-          fontFamily: "'Museo', sans-serif",
-          letterSpacing: '-0.01em',
-        }}
-      >
-        {title}
-      </div>
-      {subtitle && (
+      {/* 1. Ceja Cromática Superior Cuatricolor Oficial de EducaPlay */}
+      <RainbowEyebrow />
+
+      <div style={{ padding: isCompact ? '20px 26px' : '24px 32px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        {kicker && (
+          <span
+            style={{
+              fontSize: '18px',
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
+              fontWeight: 800,
+              color: THEME.accentDeep,
+              fontFamily: THEME.fonts.body,
+            }}
+          >
+            {kicker}
+          </span>
+        )}
+
         <div
           style={{
-            fontSize: '28px',
-            fontWeight: 700,
-            color: '#007C8D',
-            fontFamily: "'Museo Sans', sans-serif",
-            lineHeight: 1.25,
+            fontSize: isCompact ? '32px' : '36px',
+            fontWeight: 900,
+            color: THEME.ink,
+            lineHeight: 1.22,
+            fontFamily: THEME.fonts.title,
+            letterSpacing: '-0.01em',
           }}
         >
-          {subtitle}
+          {title}
         </div>
-      )}
+
+        {showAccentRule && (
+          <div
+            style={{
+              width: '84px',
+              height: '4px',
+              backgroundColor: THEME.accent,
+              borderRadius: '2px',
+              marginTop: '4px',
+              marginBottom: subtitle ? '6px' : '0px',
+            }}
+          />
+        )}
+
+        {subtitle && (
+          <div
+            style={{
+              fontSize: '26px',
+              fontWeight: 600,
+              color: THEME.accentDeep,
+              fontFamily: THEME.fonts.body,
+              lineHeight: 1.35,
+            }}
+          >
+            {subtitle}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
+
+export default TitularCard;
