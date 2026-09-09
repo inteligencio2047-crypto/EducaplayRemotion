@@ -34,39 +34,48 @@ La interacción entre el docente y los motion graphics se rige de forma estricta
 > [!CRITICAL]
 > **Nunca escribas coordenadas `top`/`left` a mano en los componentes de un episodio.** Toda posición se resuelve matemáticamente a través de `<Slot>` y `resolveSlot()` respetando esta coreografía.
 
-### 1.2. Fase Pre-Edición: Matriz de Sincronización y Validación Colaborativa
-Antes de escribir una sola línea de código en Remotion (`data.ts`), es **obligatorio** confeccionar un **Cuadro de Doble Entrada de Sincronización Pre-Edición** que sirva de puente de validación entre el Editor de Video, el Docente y el Motion Designer:
+### 1.2. Protocolo Obligatorio de Pre-Edición: Tablero Interactivo de Sincronización (Fase 0)
+> [!IMPORTANT]
+> **ESTÁNDAR MANDATORIO PARA TODAS LAS MATERIAS Y EPISODIOS FUTUROS**:
+> Antes de escribir una sola línea de código en Remotion (`data.ts`), es **estrictamente obligatorio** confeccionar el **Tablero Interactivo de Sincronización Pre-Edición** (`TABLA_SINCRONIZACION_PRE_EDICION_[CODIGO].html` y `.md`). Este protocolo aplica sin excepción a todas las materias de EducaPlay Secundaria (Educación Ambiental, Educación Económica y Financiera, Lengua/Leo, Historia, Ciudadanía Digital, Matemática, etc.) como instancia formal de validación técnica y pedagógica entre el Editor de Video, el Docente y el Motion Designer.
 
+#### 1.2.1. Entregables Obligatorios de Fase 0
+Por cada episodio a producir, el equipo debe generar en la carpeta del capítulo:
+1. `TABLA_SINCRONIZACION_PRE_EDICION_[CODIGO].html`: Interfaz web interactiva de control con selectores, enlaces de recursos y botón de lanzamiento.
+2. `TABLA_SINCRONIZACION_PRE_EDICION_[CODIGO].md`: Respaldo documental markdown formateado para lectura y control en GitHub.
+3. `TABLA_SINCRONIZACION_DATOS.json`: Matriz de datos crudos estructurada con marcas temporales, textos y metadatos.
+4. `remotion_generator.py`: Generador automatizado del proyecto Remotion (`data.ts`, `captions.ts`, componentes y assets).
+5. `local_bridge_server.py`: Micro-servidor HTTP local (puerto 3210) que permite conectar la página HTML con el CLI de Remotion con un solo clic.
+
+#### 1.2.2. Requisitos Mandatorios del Tablero de Sincronización
 1. **Cruce Temporal Exacto**:
-   - Mapear cada fila de la escaleta contra el audio real del primer corte (`PRIMER CORTE.mp4`), documentando el segundo exacto (`start_time - end_time`) y los números de frame reales (`start_frame - end_frame`).
+   - Mapear cada fila de la escaleta contra el audio real del primer corte (`PRIMER CORTE.mp4`), documentando el segundo exacto (`start_time - end_time`) y los números de frame reales a 25 fps (`start_frame - end_frame`).
 2. **Transcripción Fiel, Diferencias de Diálogo (🔴 Resaltado Rojo) y Selector de Subtítulos de 3 Vías**:
    - Transcribir el discurso real pronunciado por el docente (vía Whisper a nivel palabra).
-   - **Resaltar obligatoriamente en rojo vivo (`#DC2626`)** toda diferencia entre lo escrito en la escaleta y lo dicho en cámara.
-   - **Selector de Fuente de Subtítulos**: En el HTML, cada fila debe incluir un selector interactivo de 3 vías para decidir la fuente de generación de los subtítulos:
-     * **Guion Escaleta** (marcado por defecto: respeta la puntuación y redacción didáctica del guion).
-     * **Real Grabado (1er Corte)** (opción para apegarse al audio real cuando el docente introduce variaciones significativas o improvisaciones válidas).
-     * **Corrección Manual / Personalizado** (campo editable para que el corrector o editor redacte la versión definitiva que se exportará a `captions.ts`).
+   - **Resaltar obligatoriamente en rojo vivo (`#DC2626`)** toda diferencia entre lo escrito en la escaleta y lo dicho en cámara (omisiones, sustituciones, adiciones o cambios de entonación).
+   - **Selector interactivo de fuente de subtítulos** en cada fila del HTML:
+     * **[ ● ] Guion Escaleta (Recomendado por defecto)**: Marcado por defecto, garantiza coherencia gramatical y didáctica de guion.
+     * **[ ○ ] Real Grabado (1er Corte)**: Opción para adoptar la transcripción exacta del audio grabado cuando las variaciones del docente sean pertinentes.
+     * **[ ○ ] ✍️ Corrección Manual Personalizada**: Despliega un `<textarea>` editable donde el corrector o editor redacta la versión definitiva que se inyectará en `captions.ts`.
 3. **Columna Específica de Titulares de la Escaleta Original**:
-   - Registrar en una columna propia el texto literal del **Titular pautado en la escaleta original**, detallando su **código de tiempo y frame exacto de entrada y salida**.
-   - Dado que el titular muchas veces convive o va asociado al recurso gráfico de la misma fila (o tiene una duración disjunta), visualizar su sincronización temporal permite al editor y al docente tomar decisiones sobre composición, jerarquía visual y evitar solapamientos.
+   - Registrar en una columna propia el texto literal de cada **Titular pautado en la escaleta original**, detallando su **código de tiempo y frame exacto de entrada y salida**.
+   - Identificar explícitamente el recurso gráfico al que va asociado en la misma fila para resolver su coexistencia espacial y evitar colisiones visuales.
 4. **Columna de Propuestas Exclusiva para Filas Vacías (con Casilla Marcable)**:
-   - **Regla estricta**: La columna de propuestas **SOLO debe incluir sugerencias en las filas donde NO existan ni recursos gráficos ni titulares propuestos por el profesor en la escaleta original** (vacíos visuales en el guion).
-   - Si la fila ya cuenta con titular o recurso pautado, la columna de propuestas debe permanecer limpia (`—`) para respetar la visión del docente y evitar la saturación cognitiva del episodio.
-   - En el entregable HTML, toda propuesta debe incorporar una **casilla de verificación interactiva marcable y desmarcable (`<input type="checkbox">`)**, permitiendo al profesor y al editor activar o rechazar la propuesta con un solo clic según su criterio pedagógico.
-5. **Detección del Encuadre Real vs. Norma**:
-   - Registrar la posición real del profesor en el video (Centro, Izquierda, Fuera de cuadro) y contrastarla con la requerida según la carga de atención (alertando al editor si se requiere reencuadre digital en Premiere).
+   - **Regla de oro anti-saturación**: La columna de propuestas **SOLO puede contener sugerencias en las filas donde NO existan ni recursos gráficos ni titulares propuestos por el docente en la escaleta original** (vacíos visuales del guion). Si la fila ya cuenta con titular o recurso, la columna debe permanecer limpia (`—`).
+   - Cada propuesta debe incluir una **casilla interactiva marcable y desmarcable (`<input type="checkbox">`)**, permitiendo al profesor y al editor activar o desestimar el gráfico propuesto con un solo clic.
+5. **Detección del Encuadre Real vs. Norma de 3 Niveles de Atención**:
+   - Registrar la posición real del profesor en el video (Centro, Izquierda, Fuera de cuadro) y contrastarla con la requerida según el nivel de atención (Baja, Media o Alta), alertando al editor si se requiere reencuadre digital en Premiere.
 6. **Auditoría de Recursos, Alerta de Faltantes y Casilla de Enlace**:
    - Comparar rigurosamente los nombres y tipos de archivos de la carpeta `RECURSOS/` contra la escaleta:
-     * **Resaltado destacado de recursos faltantes**: Los archivos solicitados en la escaleta que no existan en la carpeta deben destacarse con una tarjeta de advertencia roja (`🚨 RECURSO FALTANTE EN CARPETA`).
-     * **Casilla para enlazar con el archivo correcto**: Cada recurso faltante debe contar con una casilla interactiva (campo de texto + botón de examinar archivo) para que el editor pueda asociar el reemplazo correspondiente antes de generar el código.
+     * **Alerta visual destacada para recursos faltantes**: Todo recurso solicitado que no esté presente en disco debe destacarse con tarjeta roja `🚨 RECURSO FALTANTE EN CARPETA`.
+     * **Casilla interactiva para enlazar reemplazo**: Disponer en el HTML de un campo de texto y un botón **📁 Examinar** para asociar el archivo alternativo localmente antes de generar el código.
      * Alertar archivos sin extensión (ej. videos guardados sin `.mp4`).
-     * Alertar archivos presentes no mencionados o carpetas cruzadas de otras materias/capítulos.
-     * Alertar discrepancias de formato (JPG pesados de stock sin recorte, GIF sin transparencia).
+     * Alertar imágenes pesadas sin optimizar o GIF sin fondo transparente.
 7. **Botón de Aprobación y Generación Automatizada en Remotion (Preview Local)**:
-   - Al pie de la tabla (y en barra flotante), debe incluirse un botón de **"Aceptar y Generar Proyecto Remotion"**.
-   - Al presionarlo, el sistema compila las decisiones tomadas (fuentes de subtítulos elegidas, recursos enlazados y propuestas activas), genera automáticamente los archivos de configuración (`data.ts`, `captions.ts`, `track.ts`) y levanta el servidor de **Remotion Preview en local (`localhost:3000`)** para su visualización inmediata en el navegador.
-8. **Instancia de Corrección Previa**:
-   - El documento generado debe ponerse a disposición del Editor y del Docente para ajustes y correcciones previas antes de iniciar la programación final del `data.ts`.
+   - Al pie de la tabla y en una barra flotante inferior, disponer del botón **`🚀 Aceptar y Generar Proyecto Remotion`**.
+   - Al presionarlo, el tablero compila el manifest aprobado (`TABLA_SINCRONIZACION_APROBADA.json`), llama al bridge local y genera automáticamente `data.ts`, `captions.ts` y levanta el entorno de **Remotion Preview en `http://localhost:3000`** para su visualización y revisión inmediata.
+8. **Instancia de Corrección y Firma Previa**:
+   - El documento generado debe ser validado formalmente por el Editor y el Docente antes de dar por cerrado el pase a producción.
 
 ### 1.3. Reglas de Identidad y Docentes
 - **Los nombres de las personas NUNCA se toman de la escaleta**: Las escaletas se redactan en preproducción y el casting real cambia frecuentemente. El nombre se extrae de la **placa quemada en el máster MP4** (lower third) y se confirma con coordinación.
