@@ -39,19 +39,25 @@ Antes de escribir una sola línea de código en Remotion (`data.ts`), es **oblig
 
 1. **Cruce Temporal Exacto**:
    - Mapear cada fila de la escaleta contra el audio real del primer corte (`PRIMER CORTE.mp4`), documentando el segundo exacto (`start_time - end_time`) y los números de frame reales (`start_frame - end_frame`).
-2. **Transcripción Fiel del Primer Corte**:
-   - Transcribir el discurso real pronunciado por el docente (vía Whisper con timestamps por palabra). Los textos no se adivinan: manda el discurso grabado.
-3. **Detección del Encuadre Real vs. Norma**:
+2. **Transcripción Fiel y Diferencias de Diálogo (🔴 Resaltado Rojo)**:
+   - Transcribir el discurso real pronunciado por el docente (vía Whisper a nivel palabra).
+   - **Resaltar obligatoriamente en rojo vivo (`#DC2626`)** toda diferencia entre lo escrito en la escaleta y lo dicho en cámara (omisiones, adiciones, cambios de palabras o variaciones de signos/entonación) para alertar al corrector y al editor.
+3. **Columna Específica de Titulares de la Escaleta Original**:
+   - Registrar en una columna propia el texto literal del **Titular pautado en la escaleta original**, detallando su **código de tiempo y frame exacto de entrada y salida**.
+   - Dado que el titular muchas veces convive o va asociado al recurso gráfico de la misma fila (o tiene una duración disjunta), visualizar su sincronización temporal permite al editor y al docente tomar decisiones sobre composición, jerarquía visual y evitar solapamientos.
+4. **Columna de Propuestas Exclusiva para Filas Vacías (con Casilla Marcable)**:
+   - **Regla estricta**: La columna de propuestas **SOLO debe incluir sugerencias en las filas donde NO existan ni recursos gráficos ni titulares propuestos por el profesor en la escaleta original** (vacíos visuales en el guion).
+   - Si la fila ya cuenta con titular o recurso pautado, la columna de propuestas debe permanecer limpia (`—`) para respetar la visión del docente y evitar la saturación cognitiva del episodio.
+   - En el entregable HTML, toda propuesta debe incorporar una **casilla de verificación interactiva marcable y desmarcable (`<input type="checkbox">`)**, permitiendo al profesor y al editor activar o rechazar la propuesta con un solo clic según su criterio pedagógico.
+5. **Detección del Encuadre Real vs. Norma**:
    - Registrar la posición real del profesor en el video (Centro, Izquierda, Fuera de cuadro) y contrastarla con la requerida según la carga de atención (alertando al editor si se requiere reencuadre digital en Premiere).
-4. **Propuestas Visuales Adicionales Resaltadas en Color**:
-   - Cuando el equipo de Motion Design proponga agregar una tarjeta, imagen de refuerzo, pastilla reflexiva o titular no solicitado explícitamente en la escaleta, dicha propuesta **DEBE destacarse visualmente en otro color** (ej. azul/púrpura o badge `[PROPUESTA ADICIONAL]`) para su aprobación explícita.
-5. **Auditoría Exhaustiva de Recursos**:
+6. **Auditoría Exhaustiva de Recursos**:
    - Comparar rigurosamente los nombres y tipos de archivos de la carpeta `RECURSOS/` contra la escaleta:
      * Alertar archivos sin extensión (ej. videos guardados sin `.mp4`).
      * Alertar recursos solicitados que falten en las carpetas entregadas (recursos huérfanos).
      * Alertar archivos presentes no mencionados o carpetas cruzadas de otras materias/capítulos.
      * Alertar discrepancias de formato (JPG pesados de stock sin recorte, GIF sin transparencia).
-6. **Instancia de Corrección Previa**:
+7. **Instancia de Corrección Previa**:
    - El documento generado debe ponerse a disposición del Editor y del Docente para ajustes y correcciones previas antes de iniciar la programación del `data.ts`.
 
 ### 1.3. Reglas de Identidad y Docentes
