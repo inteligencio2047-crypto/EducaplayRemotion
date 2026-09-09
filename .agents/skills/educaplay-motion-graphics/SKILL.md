@@ -13,20 +13,52 @@ Esta skill condensa el estándar oficial, reglas de oro, patrones de diseño est
 
 ## 1. Principios Fundamentales del Sistema
 
-### 1.1. El Máster ya decidió el encuadre (La coreografía se lee, no se inventa)
-El montajista y el camarógrafo mueven la cámara o reencuadran al docente para hacerle lugar al contenido gráfico:
-- **Docente a la izquierda (`framing: 'left'`)**: El Motion Graphic se ancla automáticamente a la **DERECHA** (`anchorX: 'right'`).
-- **Docente al centro (`framing: 'center'`)**: El Motion Graphic acompaña en la banda lateral disponible más ancha (`opposite` / `widest`) sin invadir la silueta de la persona ni sus manos abiertas.
-- **Docente fuera de cuadro / Orador en OFF (`framing: 'none'`)**: El Motion Graphic debe ser **CENTRADO, FIJO Y PROTAGONISTA** en pantalla (`anchorX: 'center'`), aprovechando el ancho útil de la zona segura.
+### 1.1. Categorización de Carga de Atención y Coreografía Dual
+La interacción entre el docente y los motion graphics se rige de forma estricta por el nivel de atención que demanda el contenido pedagógico. Antes de animar, cada recurso debe clasificarse en una de estas tres categorías operativas:
+
+1. **Recursos con Baja Carga de Atención (Stickers, Emojis y Titulares Cortos)**:
+   - **Contenido**: Emojis animados, stickers ilustrativos, palabras clave o titulares de 1 o 2 líneas breves.
+   - **Comportamiento del Docente**: El docente **permanece en el centro** de la pantalla (`framing: 'center'`).
+   - **Ubicación del Gráfico**: El recurso se ancla flotante a la **IZQUIERDA** del docente en pantalla, respetando su silueta sin invadir su gesticulación ni los márgenes de seguridad.
+
+2. **Recursos con Media Carga de Atención (Textos Largos, Videos Cortos, Gráficos y Enumeraciones)**:
+   - **Contenido**: Conceptos desarrollados, pastillas descriptivas, enumeraciones verticales/fichas (pasos, ejemplos), comparativas y videos secundarios breves.
+   - **Comportamiento del Docente**: El docente **se mueve o es reencuadrado a la IZQUIERDA** (`framing: 'left'`) en la línea de tiempo.
+   - **Ubicación del Gráfico**: Se ancla a la **DERECHA** (`anchorX: 'right'`), ubicándose de forma protagónica debajo del logo/marca de agua de la materia, con pastillas de mayor porte e imágenes/videos en tarjetas con `<RainbowEyebrow />`.
+
+3. **Recursos con Alta Carga de Atención (Videos Extensos y Gráficos Complejos)**:
+   - **Contenido**: Videos demostrativos largos, infografías de alta densidad conceptual, mapas o cuadros sinópticos completos explicados en voz en off.
+   - **Comportamiento del Docente**: El docente **desaparece del cuadro** (`framing: 'none'`).
+   - **Ubicación del Gráfico**: Ocupa el centro de la pantalla a **cuadro completo / full screen** hasta los márgenes de seguridad (`safeArea`), con fondo propio o viñeta de plató, mientras la narración en off guía la lectura.
 
 > [!CRITICAL]
-> **Nunca escribas coordenadas `top`/`left` a mano en los componentes de un episodio.** Toda posición se resuelve matemáticamente a través de `<Slot>` y `resolveSlot()`.
+> **Nunca escribas coordenadas `top`/`left` a mano en los componentes de un episodio.** Toda posición se resuelve matemáticamente a través de `<Slot>` y `resolveSlot()` respetando esta coreografía.
 
-### 1.2. Reglas de Identidad y Docentes
+### 1.2. Fase Pre-Edición: Matriz de Sincronización y Validación Colaborativa
+Antes de escribir una sola línea de código en Remotion (`data.ts`), es **obligatorio** confeccionar un **Cuadro de Doble Entrada de Sincronización Pre-Edición** que sirva de puente de validación entre el Editor de Video, el Docente y el Motion Designer:
+
+1. **Cruce Temporal Exacto**:
+   - Mapear cada fila de la escaleta contra el audio real del primer corte (`PRIMER CORTE.mp4`), documentando el segundo exacto (`start_time - end_time`) y los números de frame reales (`start_frame - end_frame`).
+2. **Transcripción Fiel del Primer Corte**:
+   - Transcribir el discurso real pronunciado por el docente (vía Whisper con timestamps por palabra). Los textos no se adivinan: manda el discurso grabado.
+3. **Detección del Encuadre Real vs. Norma**:
+   - Registrar la posición real del profesor en el video (Centro, Izquierda, Fuera de cuadro) y contrastarla con la requerida según la carga de atención (alertando al editor si se requiere reencuadre digital en Premiere).
+4. **Propuestas Visuales Adicionales Resaltadas en Color**:
+   - Cuando el equipo de Motion Design proponga agregar una tarjeta, imagen de refuerzo, pastilla reflexiva o titular no solicitado explícitamente en la escaleta, dicha propuesta **DEBE destacarse visualmente en otro color** (ej. azul/púrpura o badge `[PROPUESTA ADICIONAL]`) para su aprobación explícita.
+5. **Auditoría Exhaustiva de Recursos**:
+   - Comparar rigurosamente los nombres y tipos de archivos de la carpeta `RECURSOS/` contra la escaleta:
+     * Alertar archivos sin extensión (ej. videos guardados sin `.mp4`).
+     * Alertar recursos solicitados que falten en las carpetas entregadas (recursos huérfanos).
+     * Alertar archivos presentes no mencionados o carpetas cruzadas de otras materias/capítulos.
+     * Alertar discrepancias de formato (JPG pesados de stock sin recorte, GIF sin transparencia).
+6. **Instancia de Corrección Previa**:
+   - El documento generado debe ponerse a disposición del Editor y del Docente para ajustes y correcciones previas antes de iniciar la programación del `data.ts`.
+
+### 1.3. Reglas de Identidad y Docentes
 - **Los nombres de las personas NUNCA se toman de la escaleta**: Las escaletas se redactan en preproducción y el casting real cambia frecuentemente. El nombre se extrae de la **placa quemada en el máster MP4** (lower third) y se confirma con coordinación.
 - **La placa de nombre es un rect reservado (`RESERVED`)**: Se declara en `data.ts` con su rango de frames (`from` / `to`) para que ningún gráfico ni subtítulo la pise.
 
-### 1.3. Reglas Estrictas de Contraste y Legibilidad (WCAG AAA)
+### 1.4. Reglas Estrictas de Contraste y Legibilidad (WCAG AAA)
 - **NUNCA texto blanco suelto sobre el fondo del plató**: Los platós (cian `#1195C4`, lila `#EAA1F0`, verde menta, etc.) son claros y dan un ratio menor a 3.5:1 (rechazado por corrección pedagógica).
 - **Todo texto va sobre `<Surface>` o tarjetas opacas**: Fondo blanco con tinta oscura (`#07202C` / `#0C2B24`, ratio > 15:1).
 - **Énfasis triple**: Resaltado amarillo (`#FFF6C4`) + tinta oscura + subrayado o filete de color.
@@ -102,35 +134,40 @@ El proyecto utiliza exclusivamente las fuentes corporativas embebidas en `src/st
 ## 3. Flujo de Trabajo para un Episodio
 
 ```
-    [ Máster MP4 + Escaleta .docx ]
-                   │
-                   ▼
-       1. Transcripción y Cues
-    (Whisper -ml 1 ➔ words.json)
-    (cues.def.json ➔ align-cues.mjs)
-                   │
-                   ▼
-         2. Tracker de Plató
-     (track-presenter.mjs ➔ track.ts)
-     [Segmenta: left, center, none]
-                   │
-                   ▼
-      3. Componentes & Animación
-   (Tarjetas con RainbowEyebrow, Springs)
-                   │
-                   ▼
-           4. data.ts
-      (BLOCKS, MARKS, CAPTIONS)
-                   │
-                   ▼
-     5. Verificación Completa
-  (npm run check: layout + contrast)
-  (npm run stills: contact sheet)
-                   │
-                   ▼
-          6. Renders Finales
-  - MP4 Completo con Máster de Video
-  - MOV ProRes 4444 con Canal Alfa
+    [ Máster MP4 (1er Corte) + Escaleta .docx + Carpeta RECURSOS ]
+                                   │
+                                   ▼
+        0. Fase Pre-Edición: Matriz de Sincronización
+        - Transcripción y cotejo del diálogo real vs guion
+        - Auditoría de recursos (archivos sin extensión, faltantes)
+        - Categorización en 3 niveles de carga de atención
+        - Detección de posición del docente (Centro, Izquierda, OFF)
+        - Validación y correcciones previas con Editor y Docente
+                                   │
+                                   ▼
+        1. Transcripción Fina y Cues a Nivel Palabra
+        (Whisper -ml 1 ➔ words.json / cues.def.json ➔ align-cues.mjs)
+                                   │
+                                   ▼
+        2. Tracker de Plató y Segmentación Dinámica
+        (track-presenter.mjs ➔ track.ts con profileT)
+                                   │
+                                   ▼
+        3. Maquetación de Componentes & Animación
+        (Tarjetas con RainbowEyebrow, Springs, tipografía Museo)
+                                   │
+                                   ▼
+        4. Declaración Editorial en data.ts
+        (BLOCKS, MARKS, CAPTIONS, correcciones ASR y slots seguros)
+                                   │
+                                   ▼
+        5. Verificación Geométrica y Cromática
+        (npm run check: layout + contrast + overlays)
+                                   │
+                                   ▼
+        6. Exportación y Entrega
+        - MOV ProRes 4444 con Canal Alfa (Overlay transparente)
+        - MP4 Completo con Máster de Video
 ```
 
 ### Transcripción y Sincronización Whisper
@@ -159,11 +196,15 @@ npx remotion render src/index.ts Episode<CODE>-Overlay out/<CODE>-OVERLAYS-ALPHA
 
 ## 5. Checklist de Control de Calidad Pre-Render
 
-1. [ ] ¿Todas las tarjetas incluyen la **ceja cromática cuatricolor** (`#D43453`, `#F0BA46`, `#60B6D3`, `#5DAA46`)?
-2. [ ] ¿Los titulares usan `Museo 900` y las etiquetas/cuerpo usan `Museo Sans` respetando el piso de 26 px?
-3. [ ] ¿Los titulares de decisiones o mitos incluyen el filete de acento verde inferior?
-4. [ ] ¿Los motion graphics en tramos en OFF están perfectamente centrados?
-5. [ ] ¿Cuando el docente está a la izquierda los gráficos están anclados a la derecha?
-6. [ ] ¿Ningún gráfico ni subtítulo pisa al docente, ni la placa de nombre reservada, ni la marca de agua?
-7. [ ] ¿El reporte de `npm run check` arrojó 0 errores en geometría y contraste?
-8. [ ] ¿Se renderizó el `.mov` ProRes 4444 con canal alfa verificado?
+1. [ ] **Matriz Pre-Edición Aprobada**: ¿Se generó la tabla de sincronización y carga de atención, y fue revisada/aprobada por el editor y el docente?
+2. [ ] **Auditoría de Recursos Completa**: ¿Se verificaron extensiones faltantes, archivos huérfanos o ausentes en `RECURSOS/`?
+3. [ ] **Coreografía Dual Cumplida**: 
+   - Baja carga de atención: docente en el centro, recurso anclado a la izquierda.
+   - Media carga de atención: docente a la izquierda, recurso anclado a la derecha bajo el logo.
+   - Alta carga de atención / OFF: docente fuera de cuadro, recurso a pantalla completa (safe area).
+4. [ ] **Identidad Oficial EducaPlay**: ¿Todas las tarjetas incluyen la **ceja cromática cuatricolor** obligatoria (`#D43453`, `#F0BA46`, `#60B6D3`, `#5DAA46`) de 6 a 8 px?
+5. [ ] **Jerarquía Tipográfica**: ¿Titulares en `Museo 900` y cuerpo/etiquetas en `Museo Sans` respetando el piso estricto de 26 px?
+6. [ ] **Contraste WCAG AAA**: ¿Todo texto está montado sobre `<Surface>` o tarjetas blancas (nunca texto blanco sobre el plató)?
+7. [ ] **Subtítulos con Scrim**: ¿El fondo de subtítulos tiene `rgba(7, 32, 44, 0.55)` con blur de 10 px y borde sutil?
+8. [ ] **Geometría y Alpha Runs**: ¿El reporte de `npm run check` arrojó 0 colisiones contra el docente, marcas reservadas o entre bloques?
+9. [ ] **Entregables Verificados**: ¿Se renderizó el `.mov` ProRes 4444 con canal alfa verificado para el montaje final en Premiere?
