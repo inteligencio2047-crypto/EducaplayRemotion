@@ -39,9 +39,13 @@ Antes de escribir una sola línea de código en Remotion (`data.ts`), es **oblig
 
 1. **Cruce Temporal Exacto**:
    - Mapear cada fila de la escaleta contra el audio real del primer corte (`PRIMER CORTE.mp4`), documentando el segundo exacto (`start_time - end_time`) y los números de frame reales (`start_frame - end_frame`).
-2. **Transcripción Fiel y Diferencias de Diálogo (🔴 Resaltado Rojo)**:
+2. **Transcripción Fiel, Diferencias de Diálogo (🔴 Resaltado Rojo) y Selector de Subtítulos de 3 Vías**:
    - Transcribir el discurso real pronunciado por el docente (vía Whisper a nivel palabra).
-   - **Resaltar obligatoriamente en rojo vivo (`#DC2626`)** toda diferencia entre lo escrito en la escaleta y lo dicho en cámara (omisiones, adiciones, cambios de palabras o variaciones de signos/entonación) para alertar al corrector y al editor.
+   - **Resaltar obligatoriamente en rojo vivo (`#DC2626`)** toda diferencia entre lo escrito en la escaleta y lo dicho en cámara.
+   - **Selector de Fuente de Subtítulos**: En el HTML, cada fila debe incluir un selector interactivo de 3 vías para decidir la fuente de generación de los subtítulos:
+     * **Guion Escaleta** (marcado por defecto: respeta la puntuación y redacción didáctica del guion).
+     * **Real Grabado (1er Corte)** (opción para apegarse al audio real cuando el docente introduce variaciones significativas o improvisaciones válidas).
+     * **Corrección Manual / Personalizado** (campo editable para que el corrector o editor redacte la versión definitiva que se exportará a `captions.ts`).
 3. **Columna Específica de Titulares de la Escaleta Original**:
    - Registrar en una columna propia el texto literal del **Titular pautado en la escaleta original**, detallando su **código de tiempo y frame exacto de entrada y salida**.
    - Dado que el titular muchas veces convive o va asociado al recurso gráfico de la misma fila (o tiene una duración disjunta), visualizar su sincronización temporal permite al editor y al docente tomar decisiones sobre composición, jerarquía visual y evitar solapamientos.
@@ -51,14 +55,18 @@ Antes de escribir una sola línea de código en Remotion (`data.ts`), es **oblig
    - En el entregable HTML, toda propuesta debe incorporar una **casilla de verificación interactiva marcable y desmarcable (`<input type="checkbox">`)**, permitiendo al profesor y al editor activar o rechazar la propuesta con un solo clic según su criterio pedagógico.
 5. **Detección del Encuadre Real vs. Norma**:
    - Registrar la posición real del profesor en el video (Centro, Izquierda, Fuera de cuadro) y contrastarla con la requerida según la carga de atención (alertando al editor si se requiere reencuadre digital en Premiere).
-6. **Auditoría Exhaustiva de Recursos**:
+6. **Auditoría de Recursos, Alerta de Faltantes y Casilla de Enlace**:
    - Comparar rigurosamente los nombres y tipos de archivos de la carpeta `RECURSOS/` contra la escaleta:
+     * **Resaltado destacado de recursos faltantes**: Los archivos solicitados en la escaleta que no existan en la carpeta deben destacarse con una tarjeta de advertencia roja (`🚨 RECURSO FALTANTE EN CARPETA`).
+     * **Casilla para enlazar con el archivo correcto**: Cada recurso faltante debe contar con una casilla interactiva (campo de texto + botón de examinar archivo) para que el editor pueda asociar el reemplazo correspondiente antes de generar el código.
      * Alertar archivos sin extensión (ej. videos guardados sin `.mp4`).
-     * Alertar recursos solicitados que falten en las carpetas entregadas (recursos huérfanos).
      * Alertar archivos presentes no mencionados o carpetas cruzadas de otras materias/capítulos.
      * Alertar discrepancias de formato (JPG pesados de stock sin recorte, GIF sin transparencia).
-7. **Instancia de Corrección Previa**:
-   - El documento generado debe ponerse a disposición del Editor y del Docente para ajustes y correcciones previas antes de iniciar la programación del `data.ts`.
+7. **Botón de Aprobación y Generación Automatizada en Remotion (Preview Local)**:
+   - Al pie de la tabla (y en barra flotante), debe incluirse un botón de **"Aceptar y Generar Proyecto Remotion"**.
+   - Al presionarlo, el sistema compila las decisiones tomadas (fuentes de subtítulos elegidas, recursos enlazados y propuestas activas), genera automáticamente los archivos de configuración (`data.ts`, `captions.ts`, `track.ts`) y levanta el servidor de **Remotion Preview en local (`localhost:3000`)** para su visualización inmediata en el navegador.
+8. **Instancia de Corrección Previa**:
+   - El documento generado debe ponerse a disposición del Editor y del Docente para ajustes y correcciones previas antes de iniciar la programación final del `data.ts`.
 
 ### 1.3. Reglas de Identidad y Docentes
 - **Los nombres de las personas NUNCA se toman de la escaleta**: Las escaletas se redactan en preproducción y el casting real cambia frecuentemente. El nombre se extrae de la **placa quemada en el máster MP4** (lower third) y se confirma con coordinación.
