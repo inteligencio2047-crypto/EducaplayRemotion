@@ -639,6 +639,7 @@ import {
   getRemotionEnvironment,
   interpolate,
   OffthreadVideo,
+  Sequence,
   staticFile,
   useCurrentFrame,
 } from 'remotion';
@@ -710,19 +711,26 @@ export const EpisodeEEF002: React.FC<EpisodeEEF002Props> = ({
       {/* 2. Motion Graphics Blocks Layer */}
       <AbsoluteFill>
         {DATA.blocks.map((block) => {
-          if (frame < block.from || frame > block.to) return null;
+          const durationInFrames = block.to - block.from;
           return (
-            <SlotContainer
+            <Sequence
               key={block.key}
-              blockKey={block.key}
-              category={block.category}
-              anchorX={block.anchorX}
-              framing={currentFraming}
+              name={block.name}
               from={block.from}
-              to={block.to}
+              durationInFrames={durationInFrames}
             >
-              {renderBlockContent(block)}
-            </SlotContainer>
+              <SlotContainer
+                blockKey={block.key}
+                category={block.category}
+                anchorX={block.anchorX}
+                framing={currentFraming}
+                from={block.from}
+                to={block.to}
+                durationInFrames={durationInFrames}
+              >
+                {renderBlockContent(block)}
+              </SlotContainer>
+            </Sequence>
           );
         })}
       </AbsoluteFill>
