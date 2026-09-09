@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "skills": {
+    "educaplay-motion-graphics": {
+      "source": "https://github.com/isaacdinamo-debug/educaplay2047-cmyk-Motion-Graphics.git",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/educaplay-motion-graphics/SKILL.md",
+      "computedHash": "8a2252a997e7a28dd1731220e3ed5cf7eff4f48e19dabd1a864d72c71f3cc726",
+      "content_hash": "dec2722cd4178947105ac16389062de9a731e937090ac77eb4f228109ea89362"
+    },
+    "motion-designer": {
+      "source": "ncklrs/startup-os-skills",
+      "sourceType": "github",
+      "skillPath": "skills/motion-designer/SKILL.md",
+      "computedHash": "a1d1743be9f364159644bb385b5231bbce83449ce409ac2baf87f69218edef66"
+    }
+  }
+}
