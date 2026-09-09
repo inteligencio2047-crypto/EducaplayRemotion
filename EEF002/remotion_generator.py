@@ -676,7 +676,7 @@ export const EpisodeEEF002: React.FC<EpisodeEEF002Props> = ({
         return (
           <MediaCard
             kind={block.isVideo ? 'video' : 'image'}
-            src={staticFile(block.src)}
+            src={block.src}
             title={block.title}
             caption={block.caption}
             isCompact={block.category === 'small_left'}
